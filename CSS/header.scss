@@ -1,0 +1,51 @@
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  width: 92px;
+  height: 69px;
+}
+
+.header__button{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu_list{
+  display: flex;
+}
+
+.menu_item{
+  display: flex;
+  align-items: center;
+
+  &:last-child{
+    &:after{
+      display: none;
+    }
+  }
+
+  &:after{
+    display: inline-block;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #ffffff;
+  }
+}
+
+.menu_link{
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 11px;
+  font-size: 13px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 500;
+}

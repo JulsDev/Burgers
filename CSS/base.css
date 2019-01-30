@@ -1,0 +1,26 @@
+@charset "UTF-8";
+html { width: 100%; height: 100%; }
+
+body { width: 100%; height: 100%; margin: 0; /* у body по умолчанию отступы 8px */ background: #ffffff; font-size: 14px; font-family: 'Ubuntu'; }
+
+.wrapper { overflow: hidden; width: 100%; min-width: 945px; min-height: 100%; }
+
+.container { width: 945px; margin: 0 auto; padding-top: 12px; }
+
+.section { height: 100vh; min-height: 650px; }
+
+.section_centered .container { height: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+h1, h2, h3, h4, h5, h6 { margin: 0; font-weight: normal; }
+
+p, ul { margin: 0; padding: 0; }
+
+li { list-style: none; }
+
+a { text-decoration: none; }
+
+button { border: none; background: transparent; cursor: pointer; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }

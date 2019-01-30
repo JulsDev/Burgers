@@ -1,0 +1,17 @@
+// лучше задавать padding вместо точных размеров, т.к. может поменяться текст внутри кнопки
+
+.button{
+  padding: 13px 15px;
+  background: $red;
+  border-radius: 5px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  &:hover{
+    background: $dark-red;
+  }
+
+  &__black{
+    background: #000;
+  }
+}

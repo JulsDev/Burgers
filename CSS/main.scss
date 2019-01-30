@@ -1,0 +1,18 @@
+
+$red: #e45028;
+$dark-red: #c1401e;
+$orange: #f9b43b;
+$black: #2f3234;
+
+@import "./normalize.scss";
+@import "./fonts.scss";
+@import "./base.scss";
+
+@import "./header.scss";
+@import "./button.scss";
+@import "./hero.scss";
+@import "./title.scss";
+@import "./best.scss";
+@import "./reviews.scss";
+@import "./fixed-menu.scss";
+
