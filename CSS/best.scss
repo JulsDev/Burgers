@@ -21,11 +21,17 @@
   }
 }
 
+.best-image{
+  display: inline-flex;
+  justify-content: center;
+  vertical-align: middle;
+}
+
 .best__icon{
   display: inline-block;
-  justify-content: center;
-  padding-bottom: 40px;
+  justify-content: flex-start;
   height: 125px;
+  padding-bottom: 37px;
 }
 
 .best__descr-title{

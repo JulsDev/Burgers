@@ -3,6 +3,7 @@ $red: #e45028;
 $dark-red: #c1401e;
 $orange: #f9b43b;
 $black: #2f3234;
+$white: #ffffff;
 
 @import "./normalize.scss";
 @import "./fonts.scss";
@@ -14,5 +15,7 @@ $black: #2f3234;
 @import "./title.scss";
 @import "./best.scss";
 @import "./reviews.scss";
+@import "./form.scss";
+@import "./contacts.scss";
 @import "./fixed-menu.scss";
 
