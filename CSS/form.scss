@@ -1,0 +1,146 @@
+
+.form{
+  background: url('../img/form/bg-texture.png') center center no-repeat fixed,
+              url('../img/form/bg.png') center center no-repeat fixed;
+  background-size: cover;
+}
+
+.order_form{
+  display: flex;
+  margin: 50px 0px;
+}
+
+.order_form-data,
+.order_form-comment{
+  width: 50%;
+}
+
+.form__row{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.form__block{
+  flex: 1;
+  margin-right: 20px;
+}
+
+.form__block-input{
+  border-radius: 5px;
+  width: 100%;
+  height: 35px;
+  border: 1px solid #d1cfcb;
+  background-color: #d1cfcb;
+}
+
+.form__label{
+  color: $white;
+  font-size: 14px;
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.form__text{
+  resize: none;
+  width: 100%;
+  height: 109px;
+  border-radius: 5px;
+  border: 1px solid #d1cfcb;
+  background-color: #d1cfcb;
+}
+
+.form__text:focus,
+.form__block-input:focus{
+  border: 1px solid #f89513;
+  outline: none !important;
+}
+
+
+
+.form__block-choise{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.block-radio{
+  margin-right: 20px;
+}
+
+.radio,
+.checkbox{
+  display: none;
+  margin-right: 10px;
+}
+
+.radio-custom,
+.checkbox-custom{
+  position: relative;
+  width: 15px;
+  height: 15px;
+  border: 1px solid $white;
+  background-color: $white;
+}
+
+.radio-custom,
+.checkbox-custom,
+.form-label{
+  display: inline-flex;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.form-label{
+  color: $white;
+  font-size: 14px;
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  line-height: 24px;
+}
+
+// Стилизуем новые радиобаттон
+.radio:checked+.radio-custom::before{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  top: 3px;
+  left: 3px;
+  border: 1px solid #e35028;
+  background: #e35028;
+}
+
+.radio-custom,
+.radio:checked+.radio-custom::before{
+  border-radius: 50%;
+  color: #e35028;
+}
+
+
+// Стилизуем новый чекбокс
+.checkbox:checked+.checkbox-custom::before{
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 14px;
+  height: 9px;
+  border-radius: 1px;
+  border-left: 4px solid #e35028;
+  border-bottom: 4px solid #e35028;
+  -webkit-transform: rotate(-55deg);
+	-moz-transform: rotate(-55deg);
+	-o-transform: rotate(-55deg);
+	-ms-transform: rotate(-55deg);
+	transform: rotate(-55deg);
+}
+
+.form .button,
+.button__clear{
+  color: $white;
+  outline: none;
+}
+

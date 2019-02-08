@@ -7,7 +7,7 @@ body{
   width: 100%;
   height: 100%;
   margin: 0;          /* у body по умолчанию отступы 8px */
-  background: #ffffff; 
+  background: $white; 
   font-size: 14px;
   font-family: 'Ubuntu';
 }
@@ -22,7 +22,7 @@ body{
 .container{
   width: 945px;
   margin: 0 auto;
-  padding-top: 12px;
+  // padding-top: 12px;
 }
 
 .section{
