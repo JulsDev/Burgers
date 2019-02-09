@@ -22,6 +22,7 @@
   height: 100vh;
   top: 0;
   right: 0;
+  overflow: hidden;
 }
 
 .menu-slider__item{
@@ -31,31 +32,38 @@
 
 .menu__item-title{
    position: relative;
+   width: 5rem;
    top: 0;
    left: 0;
+   bottom: 0;
    background-repeat: no-repeat;
-   cursor: pointer;
+   background-size: cover;
    line-height: 5rem;
+   cursor: pointer;
 }
 
 .slider-title{
    white-space: nowrap;
-   //position: absolute;
+   position: absolute;
+   text-align: center;
    left: 0;
    bottom: 0;
    font-size: 36px;
    transform: rotate(-90deg);
    transform-origin: 0 0;
    padding-bottom: 40px;
+   padding-left: 25px;
 }
 
-//.menu__item-content{
-//   background-color: rgba(47, 50, 52, 0.929);
-//   max-width: 0;
-//   visibility: hidden;
-//   opacity: 0;
-//   color: $white;
-//   font-family: 'Ubuntu';
-//   font-weight: 300;
-//   line-height: 1.714;
-//}
+.menu__item-content{
+   background-color: rgba(47, 50, 52, 0.929);
+   max-width: 0px;
+   color: $white;
+   font-family: 'Ubuntu';
+   font-weight: 300;
+   line-height: 1.714;
+   visibility: hidden;
+   opacity: 0;
+   transition: 1s;
+   transition-property: max-width, opacity, visibility;   
+}
