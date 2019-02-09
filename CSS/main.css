@@ -186,9 +186,13 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 .title { font-size: 72px; color: #f9b43b; font-family: 'Gagalin'; line-height: 64px; }
 
+.title_black { color: #2f3234; }
+
+.title_white { color: #ffffff; }
+
 .best { background: url("../img/best/bg_best.png") center center/cover no-repeat; }
 
-.best .title { margin-bottom: 55px; color: #2f3234; }
+.title_black { margin-bottom: 55px; }
 
 .best__list { display: -webkit-box; display: -ms-flexbox; display: flex; }
 
@@ -203,6 +207,50 @@ table { border-collapse: collapse; border-spacing: 0; }
 .best__descr-title { padding-bottom: 25px; color: #2f3234; font-family: 'Lifehack'; font-size: 24px; line-height: 28.14px; letter-spacing: -0.6px; }
 
 .best__descr-content { opacity: 0.8; color: #2f3234; font-family: 'Ubuntu'; font-size: 14px; line-height: 24.02px; }
+
+.team { position: relative; background: url("../img/team/SBS_1255-X2.png") center center no-repeat; background-size: cover; }
+
+.team__block { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; position: absolute; top: 0; right: 0; bottom: 0; width: 50%; background: #2f3234; opacity: 0.93; padding-top: 53px; }
+
+.team__block .title { margin-bottom: 46px; }
+
+.team__item { display: block; margin-bottom: 35px; }
+
+.team__item-person { margin-bottom: 17px; }
+
+.team__item-link { font-family: 'Gagalin'; font-size: 14px; font-weight: 400; line-height: 28.13px; color: #ffffff; }
+
+.team__item-link:before { content: ""; display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; vertical-align: centre; width: 9px; height: 6px; background: url("../img/team/Polygon_1.png") center center no-repeat; margin-right: 10px; }
+
+.team__item-block { display: -webkit-box; display: -ms-flexbox; display: flex; height: 0; overflow: hidden; }
+
+.photo__person { margin: 0px 21px; width: 100px; height: 100px; border-radius: 50%; }
+
+.team__item-descr { width: 208px; color: #ffffff; font-family: 'Ubuntu'; font-size: 14px; font-weight: 300; line-height: 24.01px; }
+
+.block-title { height: 15px; font-weight: 700; margin-bottom: 20px; }
+
+.block_text { font-weight: 300; }
+
+.team__item-active .team__item-link { color: #f9b43b; }
+
+.team__item-active .team__item-link::before { -webkit-transform: rotate(-180deg); -ms-transform: rotate(-180deg); transform: rotate(-180deg); }
+
+.team__item-active .team__item-block { height: 100px; }
+
+.menu-section { background: url("../img/menu/main-bg.png") center center no-repeat; background-size: cover; }
+
+.menu-slider { display: -webkit-box; display: -ms-flexbox; display: flex; position: relative; top: 0; right: 0; }
+
+.menu-slider-title { padding-top: 109px; padding-left: 60px; }
+
+.menu-slider__list { display: -webkit-box; display: -ms-flexbox; display: flex; position: absolute; height: 100vh; top: 0; right: 0; }
+
+.menu-slider__item { display: -webkit-box; display: -ms-flexbox; display: flex; width: 80px; }
+
+.menu__item-title { position: relative; top: 0; left: 0; background-repeat: no-repeat; cursor: pointer; line-height: 5rem; }
+
+.slider-title { white-space: nowrap; left: 0; bottom: 0; font-size: 36px; -webkit-transform: rotate(-90deg); -ms-transform: rotate(-90deg); transform: rotate(-90deg); -webkit-transform-origin: 0 0; -ms-transform-origin: 0 0; transform-origin: 0 0; padding-bottom: 40px; }
 
 .reviews { background: #2f3234; position: relative; }
 
