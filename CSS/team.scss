@@ -1,0 +1,99 @@
+
+.team{
+  position: relative;
+  background: url('../img/team/SBS_1255-X2.png') center center no-repeat;
+  background-size: cover;
+}
+
+.team__block{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  background: $black;
+  opacity: 0.93;
+  padding-top: 53px;
+
+  .title{
+    margin-bottom: 46px;
+  }
+}
+
+.team__item{
+  display: block;
+  margin-bottom: 35px;
+}
+
+.team__item-person{
+  margin-bottom: 17px;
+}
+
+.team__item-link{
+  font-family: 'Gagalin';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28.13px;
+  color: $white;
+
+  &:before{
+    content: "";
+    display: inline-flex;
+    vertical-align: centre;
+    width: 9px;
+    height: 6px;
+    background: url('../img/team/Polygon_1.png') center center no-repeat;
+    margin-right: 10px;
+  }
+}
+
+.team__item-block{
+  display: flex;
+  height: 0;
+  overflow: hidden;
+}
+
+.photo__person{
+  margin: 0px 21px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.team__item-descr{
+  width: 208px;
+  color: $white;
+  font-family: 'Ubuntu';
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24.01px;
+}
+
+.block-title{
+  height: 15px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.block_text{
+  font-weight: 300;
+}
+
+.team__item-active{
+
+  .team__item-link{
+    color: $orange;
+  }
+
+  .team__item-link::before{
+    transform: rotate(-180deg);
+  }
+
+  .team__item-block{
+    height: 100px;
+  }
+}

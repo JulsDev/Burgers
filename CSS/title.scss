@@ -4,4 +4,12 @@
   color: $orange;
   font-family: 'Gagalin';
   line-height: 64px;
+
+  &_black{
+    color: $black;
+  }
+
+  &_white{
+    color: $white;
+  }
 }
