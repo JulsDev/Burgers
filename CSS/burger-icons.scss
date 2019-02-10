@@ -1,0 +1,55 @@
+
+// Иконка "Состав"
+.display-icon{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.burgers-icon-gen{
+  position: relative;
+}
+
+.display-icon-burg{
+  width: 90px;
+  height: 90px;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: $red;
+  opacity: 0.4;
+}
+
+.burgers-icon-burg{
+  width: 46px;
+  height: 44px;
+}
+
+.title-text{
+  font-size: 14px;
+  line-height: 15px;
+}
+
+// Иконка "ККал"
+.display-icon-kkal{
+  width: 90px;
+  height: 90px;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: none;
+  opacity: 0.5;
+}
+
+.burgers-icon-kkal{
+  width: 60px;
+  height: 60px;
+}
+
+.title-text-icon{
+  font-size: 18px;
+  line-height: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+}

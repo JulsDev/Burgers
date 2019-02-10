@@ -190,6 +190,8 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 .title_white { color: #ffffff; }
 
+.title_red { color: #e45028; }
+
 .best { background: url("../img/best/bg_best.png") center center/cover no-repeat; }
 
 .title_black { margin-bottom: 55px; }
@@ -208,21 +210,39 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 .best__descr-content { opacity: 0.8; color: #2f3234; font-family: 'Ubuntu'; font-size: 14px; line-height: 24.02px; }
 
-.burgers { background: #466368; background: -webkit-radial-gradient(#ff9933, #ffcc33); background: -o-radial-gradient(#ff9933, #ffcc33); background: radial-gradient(#ff9933, #ffcc33); }
+.display-icon { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
-.burgers__cotainer { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 100%; padding: 85px 42px; }
+.burgers-icon-gen { position: relative; }
 
-.burgers-arrow-left, .burgers-arrow-right { width: 75px; }
+.display-icon-burg { width: 90px; height: 90px; border-radius: 5px; padding: 10px; background-color: #e45028; opacity: 0.4; }
 
-.burgers-main { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin-right: 68px; width: 890px; }
+.burgers-icon-burg { width: 46px; height: 44px; }
 
-.burgers-main__image, .burgers-main__descr { width: 50%; }
+.title-text { font-size: 14px; line-height: 15px; }
 
-.burgers-main__image { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; padding: 28px; }
+.display-icon-kkal { width: 90px; height: 90px; border-radius: 5px; padding: 10px; background-color: none; opacity: 0.5; }
 
-.burgers-main__img { width: 470px; height: 330px; position: relative; }
+.burgers-icon-kkal { width: 60px; height: 60px; }
 
-.burgers-burg-icon { position: absolute; top: 0; left: 0; }
+.title-text-icon { font-size: 18px; line-height: 15px; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -30%); -ms-transform: translate(-50%, -30%); transform: translate(-50%, -30%); }
+
+.burgers { background: #466368; background-image: -webkit-gradient(linear, left top, left bottom, from(#ffcc33), color-stop(50%, #ff9933), to(#ffcc33)); background-image: -webkit-linear-gradient(#ffcc33 0%, #ff9933 50%, #ffcc33 100%); background-image: -o-linear-gradient(#ffcc33 0%, #ff9933 50%, #ffcc33 100%); background-image: linear-gradient(#ffcc33 0%, #ff9933 50%, #ffcc33 100%); position: relative; }
+
+.slider__container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.slider-arrow { position: absolute; display: -webkit-box; display: -ms-flexbox; display: flex; top: 50%; width: 27px; height: 13px; }
+
+.slider-arrow__left { left: 40px; }
+
+.slider-arrow__right { right: 60px; }
+
+.burgers-main { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 100%; }
+
+.burgers-main__image { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 50%; padding: 28px; position: relative; }
+
+.display-icon-burg { position: absolute; top: 0; left: 0; }
+
+.display-icon-kkal { position: absolute; left: 0; bottom: 0; }
 
 .burgers-main__descr { width: 412px; }
 
@@ -234,9 +254,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 .burgers-main__price { margin-right: 32px; }
 
-.burger-cost { font-size: 72px; color: #e45028; font-family: 'Gagalin'; line-height: 64px; }
-
-.burger-currency { font-size: 22px; color: #e45028; font-family: 'Gagalin'; line-height: 64px; }
+.burger-currency { font-size: 22px; }
 
 .burgers-button { margin-top: 40px; }
 

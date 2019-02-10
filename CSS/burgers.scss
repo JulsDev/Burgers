@@ -1,56 +1,63 @@
 
 .burgers{
   background:#466368;
-  background: radial-gradient(#ff9933, #ffcc33);
+  background-image: linear-gradient(#ffcc33 0%, #ff9933 50%, #ffcc33 100%);
+  position: relative;
 }
 
-.burgers__cotainer{
+.slider__container{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  padding: 85px 42px;
 }
 
-.burgers-arrow-left,
-.burgers-arrow-right{
-  width: 75px;
+.slider-arrow{
+  position: absolute;
+  display: flex;
+  top: 50%;
+  width: 27px;
+  height: 13px;
+
+  &__left{
+    left: 40px;
+  }
+
+  &__right{
+    right: 60px;
+  }
 }
 
 .burgers-main{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 68px;
-  width: 890px;
-}
-
-.burgers-main__image,
-.burgers-main__descr{
-   width: 50%;
+  width: 100%;
 }
 
 .burgers-main__image{
   display: flex;
   justify-content: center;
+  width: 50%;
   padding: 28px;
-}
-
-.burgers-main__img{
-  width: 470px;
-  height: 330px;
   position: relative;
 }
 
-.burgers-burg-icon{
+// Иконки на бургере
+.display-icon-burg{
   position: absolute;
   top: 0;
   left: 0;
 }
+.display-icon-kkal{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
 
+
+// Блок "Описание бургера"
 .burgers-main__descr{
   width: 412px;
-  
   .title{
     margin-bottom: 52px;
   }
@@ -72,21 +79,12 @@
   margin-right: 32px;
 }
 
-.burger-cost{
-  font-size: 72px;
-  color: $red;
-  font-family: 'Gagalin';
-  line-height: 64px;
-}
 .burger-currency{
   font-size: 22px;
-  color: $red;
-  font-family: 'Gagalin';
-  line-height: 64px;
 }
+
 .burgers-button{
   margin-top: 40px;
-
   .button{
     width: 95px;
   }
