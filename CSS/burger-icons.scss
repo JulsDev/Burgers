@@ -43,6 +43,7 @@
 .burgers-icon-kkal{
   width: 60px;
   height: 60px;
+  fill: $white;
 }
 
 .title-text-icon{
@@ -52,4 +53,13 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -30%);
+}
+
+.burger-consist_hover{
+  position: absolute;
+  opacity: 0;
+}
+
+.display-icon:hover + .burger-consist_hover{
+  opacity: 1;
 }

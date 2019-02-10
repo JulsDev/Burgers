@@ -1,0 +1,38 @@
+.composition{
+  display: flex;
+  align-items: flex-start;
+  width: 270px;
+  border-radius: 5px;
+  background: rgba($white, 0.8);
+  padding: 18px 22px;
+}
+
+.composition__table{
+  width: 100%;
+  font-family: 'Ubuntu';
+}
+
+.composition__item{
+  padding-bottom: 5px;
+
+  &:last-child{
+    padding-bottom: 0px;
+  }
+}
+
+.composition__image{
+  width: 50px;
+  height: 50px;
+  padding-right: 25px;
+}
+.composition__icon{
+  width: 48px;
+  height: 43px;
+}
+
+.composition__text{
+  font-weight: 500;
+}
+.composition__weight{
+  text-align: right;
+}

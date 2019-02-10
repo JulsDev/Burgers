@@ -1,10 +1,18 @@
 
+// color
 $red: #e45028;
 $dark-red: #c1401e;
 $orange: #f9b43b;
 $black: #2f3234;
 $white: #ffffff;
 
+
+// breakpoints
+$tablets: 768px;
+$phones: 480px;
+
+
+// import
 @import "./normalize.scss";
 @import "./fonts.scss";
 @import "./base.scss";
@@ -16,9 +24,11 @@ $white: #ffffff;
 @import "./best.scss";
 @import "./burger-icons.scss";
 @import "./burgers.scss";
+@import "./composition.scss";
 @import "./team.scss";
 @import "./menu.scss";
 @import "./reviews.scss";
+@import "./work.scss";
 @import "./form.scss";
 @import "./contacts.scss";
 @import "./fixed-menu.scss";

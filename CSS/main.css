@@ -222,9 +222,13 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 .display-icon-kkal { width: 90px; height: 90px; border-radius: 5px; padding: 10px; background-color: none; opacity: 0.5; }
 
-.burgers-icon-kkal { width: 60px; height: 60px; }
+.burgers-icon-kkal { width: 60px; height: 60px; fill: #ffffff; }
 
 .title-text-icon { font-size: 18px; line-height: 15px; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -30%); -ms-transform: translate(-50%, -30%); transform: translate(-50%, -30%); }
+
+.burger-consist_hover { position: absolute; opacity: 0; }
+
+.display-icon:hover + .burger-consist_hover { opacity: 1; }
 
 .burgers { background: #466368; background-image: -webkit-gradient(linear, left top, left bottom, from(#ffcc33), color-stop(50%, #ff9933), to(#ffcc33)); background-image: -webkit-linear-gradient(#ffcc33 0%, #ff9933 50%, #ffcc33 100%); background-image: -o-linear-gradient(#ffcc33 0%, #ff9933 50%, #ffcc33 100%); background-image: linear-gradient(#ffcc33 0%, #ff9933 50%, #ffcc33 100%); position: relative; }
 
@@ -259,6 +263,22 @@ table { border-collapse: collapse; border-spacing: 0; }
 .burgers-button { margin-top: 40px; }
 
 .burgers-button .button { width: 95px; }
+
+.composition { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; width: 270px; border-radius: 5px; background: rgba(255, 255, 255, 0.8); padding: 18px 22px; }
+
+.composition__table { width: 100%; font-family: 'Ubuntu'; }
+
+.composition__item { padding-bottom: 5px; }
+
+.composition__item:last-child { padding-bottom: 0px; }
+
+.composition__image { width: 50px; height: 50px; padding-right: 25px; }
+
+.composition__icon { width: 48px; height: 43px; }
+
+.composition__text { font-weight: 500; }
+
+.composition__weight { text-align: right; }
 
 .team { position: relative; background: url("../img/team/SBS_1255-X2.png") center center no-repeat; background-size: cover; }
 
@@ -319,6 +339,8 @@ table { border-collapse: collapse; border-spacing: 0; }
 .reviews__title { font-family: 'Gagalin'; font-weight: 400; line-height: 28.11px; }
 
 .reviews__text { font-family: 'Ubuntu'; font-weight: 300; line-height: 24px; padding: 17px auto; margin-top: 17px; margin-bottom: 30px; }
+
+.work { background: url("../img/howwork/BG_.png") center center no-repeat; background-size: cover; }
 
 .form { background: url("../img/form/bg-texture.png") center center no-repeat fixed, url("../img/form/bg.png") center center no-repeat fixed; background-size: cover; }
 
