@@ -7,7 +7,7 @@
 
 .order_form{
   display: flex;
-  margin: 50px 0px;
+  margin: rem(50px) rem(0px);
 }
 
 .order_form-data,
@@ -18,35 +18,35 @@
 .form__row{
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: rem(20px);
 }
 
 .form__block{
   flex: 1;
-  margin-right: 20px;
+  margin-right: rem(20px);
 }
 
 .form__block-input{
-  border-radius: 5px;
+  border-radius: rem(5px);
   width: 100%;
-  height: 35px;
+  height: rem(35px);
   border: 1px solid #d1cfcb;
   background-color: #d1cfcb;
 }
 
 .form__label{
   color: $white;
-  font-size: 14px;
+  font-size: rem(14px);
   font-family: 'Ubuntu';
   font-weight: 300;
-  line-height: 24px;
+  line-height: rem(24px);
 }
 
 .form__text{
   resize: none;
   width: 100%;
-  height: 109px;
-  border-radius: 5px;
+  height: rem(109px);
+  border-radius: rem(5px);
   border: 1px solid #d1cfcb;
   background-color: #d1cfcb;
 }
@@ -62,24 +62,24 @@
 .form__block-choise{
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: rem(20px);
 }
 
 .block-radio{
-  margin-right: 20px;
+  margin-right: rem(20px);
 }
 
 .radio,
 .checkbox{
   display: none;
-  margin-right: 10px;
+  margin-right: rem(10px);
 }
 
 .radio-custom,
 .checkbox-custom{
   position: relative;
-  width: 15px;
-  height: 15px;
+  width: rem(15px);
+  height: rem(15px);
   border: 1px solid $white;
   background-color: $white;
 }
@@ -89,15 +89,16 @@
 .form-label{
   display: inline-flex;
   vertical-align: middle;
-  margin-right: 10px;
+  margin-right: rem(10px);
+  cursor: pointer;
 }
 
 .form-label{
   color: $white;
-  font-size: 14px;
+  font-size: rem(14px);
   font-family: 'Ubuntu';
   font-weight: 300;
-  line-height: 24px;
+  line-height: rem(24px);
 }
 
 // Стилизуем новые радиобаттон
@@ -105,10 +106,10 @@
   content: "";
   display: block;
   position: absolute;
-  width: 7px;
-  height: 7px;
-  top: 3px;
-  left: 3px;
+  width: rem(7px);
+  height: rem(7px);
+  top: rem(3px);
+  left: rem(3px);
   border: 1px solid #e35028;
   background: #e35028;
 }
@@ -124,10 +125,10 @@
 .checkbox:checked+.checkbox-custom::before{
   content: "";
   position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 14px;
-  height: 9px;
+  left: 0;
+  top: 0;
+  width: rem(14px);
+  height: rem(9px);
   border-radius: 1px;
   border-left: 4px solid #e35028;
   border-bottom: 4px solid #e35028;

@@ -11,8 +11,8 @@
   right: 0;
 
   &-title{
-    padding-top: 109px;
-    padding-left: 60px;
+    padding-top: rem(109px);
+    padding-left: rem(60px);
   }
 }
 
@@ -27,7 +27,7 @@
 
 .menu-slider__item{
   display: flex;
-  width: 80px;
+  width: rem(80px);
 }
 
 .menu__item-title{
@@ -48,16 +48,16 @@
    text-align: center;
    left: 0;
    bottom: 0;
-   font-size: 36px;
+   font-size: rem(36px);
    transform: rotate(-90deg);
    transform-origin: 0 0;
-   padding-bottom: 40px;
-   padding-left: 25px;
+   padding-bottom: rem(40px);
+   padding-left: rem(25px);
 }
 
 .menu__item-content{
    background-color: rgba(47, 50, 52, 0.929);
-   max-width: 0px;
+   max-width: 0;
    color: $white;
    font-family: 'Ubuntu';
    font-weight: 300;

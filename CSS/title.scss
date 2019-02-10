@@ -1,9 +1,9 @@
 
 .title{
-  font-size: 72px;
+  font-size: rem(72px);
   color: $orange;
   font-family: 'Gagalin';
-  line-height: 64px;
+  line-height: rem(64px);
 
   &_black{
     color: $black;

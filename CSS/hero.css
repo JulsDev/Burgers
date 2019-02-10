@@ -1,0 +1,17 @@
+.hero { background: url("../img/hero/hero_texture.png") center center no-repeat fixed, url("../img/hero/hero_bg.jpg") center center no-repeat fixed; background-size: cover; }
+
+.hero__content { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 100%; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
+
+.hero__content-image, .hero__content-tagline { width: 50%; }
+
+.hero__content-image { margin-right: rem(45px); }
+
+.hero__burger-image { width: 100%; }
+
+.hero__content-tagline { justify-items: center; -ms-flex-line-pack: center; align-content: center; }
+
+.hero__content-subtitle { font-size: rem(65px); color: #fff; font-family: 'Lifehack'; letter-spacing: rem(-1.63px); line-height: rem(60px); padding-top: rem(30px); }
+
+.arrow-scroll { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; padding-top: rem(95px); }
+
+.arrow-scroll-img { width: rem(29px); height: rem(14px); }

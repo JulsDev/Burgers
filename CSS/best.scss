@@ -3,7 +3,7 @@
 }
 
 .title_black{
-  margin-bottom: 55px;
+  margin-bottom: rem(55px);
 }
 
 .best__list{
@@ -13,7 +13,7 @@
 .best__item{
   text-align: center;
   width: 33.3%;
-  margin-right: 36px;
+  margin-right: rem(36px);
 
   &:last-child{
     margin-right: 0px;
@@ -29,23 +29,23 @@
 .best__icon{
   display: inline-block;
   justify-content: flex-start;
-  height: 125px;
-  padding-bottom: 37px;
+  height: rem(125px);
+  padding-bottom: rem(37px);
 }
 
 .best__descr-title{
-  padding-bottom: 25px;
+  padding-bottom: rem(25px);
   color: $black;
   font-family: 'Lifehack';
-  font-size: 24px;
-  line-height: 28.14px;
-  letter-spacing: -0.6px;
+  font-size: rem(24px);
+  line-height: rem(28.14px);
+  letter-spacing: (-0.6px);
 }
 
 .best__descr-content{
   opacity: 0.8;
   color: $black;
   font-family: 'Ubuntu';
-  font-size: 14px;
-  line-height: 24.02px;
+  font-size: rem(14px);
+  line-height: (24.02px);
 }

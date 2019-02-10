@@ -12,43 +12,43 @@
 }
 
 .display-icon-burg{
-  width: 90px;
-  height: 90px;
+  width: rem(90px);
+  height: rem(90px);
   border-radius: 5px;
-  padding: 10px;
+  padding: rem(10px);
   background-color: $red;
   opacity: 0.4;
 }
 
 .burgers-icon-burg{
-  width: 46px;
-  height: 44px;
+  width: rem(46px);
+  height: rem(44px);
 }
 
 .title-text{
-  font-size: 14px;
-  line-height: 15px;
+  font-size: rem(14px);
+  line-height: rem(15px);
 }
 
 // Иконка "ККал"
 .display-icon-kkal{
-  width: 90px;
-  height: 90px;
+  width: rem(90px);
+  height: rem(90px);
   border-radius: 5px;
-  padding: 10px;
+  padding: rem(10px);
   background-color: none;
   opacity: 0.5;
 }
 
 .burgers-icon-kkal{
-  width: 60px;
-  height: 60px;
+  width: rem(60px);
+  height: rem(60px);
   fill: $white;
 }
 
 .title-text-icon{
-  font-size: 18px;
-  line-height: 15px;
+  font-size: rem(18px);
+  line-height: rem(15px);
   position: absolute;
   top: 50%;
   left: 50%;

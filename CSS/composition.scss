@@ -1,10 +1,10 @@
 .composition{
   display: flex;
   align-items: flex-start;
-  width: 270px;
+  width: rem(270px);
   border-radius: 5px;
   background: rgba($white, 0.8);
-  padding: 18px 22px;
+  padding: rem(18px) rem(22px);
 }
 
 .composition__table{
@@ -13,7 +13,7 @@
 }
 
 .composition__item{
-  padding-bottom: 5px;
+  padding-bottom: rem(5px);
 
   &:last-child{
     padding-bottom: 0px;
@@ -21,13 +21,13 @@
 }
 
 .composition__image{
-  width: 50px;
-  height: 50px;
-  padding-right: 25px;
+  width: rem(50px);
+  height: rem(50px);
+  padding-right: rem(25px);
 }
 .composition__icon{
-  width: 48px;
-  height: 43px;
+  width: rem(48px);
+  height: rem(43px);
 }
 
 .composition__text{

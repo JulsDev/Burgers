@@ -17,37 +17,37 @@
   width: 50%;
   background: $black;
   opacity: 0.93;
-  padding-top: 53px;
+  padding-top: rem(53px);
 
   .title{
-    margin-bottom: 46px;
+    margin-bottom: rem(46px);
   }
 }
 
 .team__item{
   display: block;
-  margin-bottom: 35px;
+  margin-bottom: rem(35px);
 }
 
 .team__item-person{
-  margin-bottom: 17px;
+  margin-bottom: rem(17px);
 }
 
 .team__item-link{
   font-family: 'Gagalin';
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: 400;
-  line-height: 28.13px;
+  line-height: rem(28.13px);
   color: $white;
 
   &:before{
     content: "";
     display: inline-flex;
     vertical-align: centre;
-    width: 9px;
-    height: 6px;
+    width: rem(9px);
+    height: rem(6px);
     background: url('../img/team/Polygon_1.png') center center no-repeat;
-    margin-right: 10px;
+    margin-right: rem(10px);
   }
 }
 
@@ -58,25 +58,25 @@
 }
 
 .photo__person{
-  margin: 0px 21px;
-  width: 100px;
-  height: 100px;
+  margin: rem(0px) rem(21px);
+  width: rem(100px);
+  height: rem(100px);
   border-radius: 50%;
 }
 
 .team__item-descr{
-  width: 208px;
+  width: rem(208px);
   color: $white;
   font-family: 'Ubuntu';
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: 300;
-  line-height: 24.01px;
+  line-height: rem(24.01px);
 }
 
 .block-title{
-  height: 15px;
+  height: rem(15px);
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: rem(20px);
 }
 
 .block_text{
@@ -94,6 +94,6 @@
   }
 
   .team__item-block{
-    height: 100px;
+    height: rem(100px);
   }
 }

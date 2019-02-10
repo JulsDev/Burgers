@@ -15,15 +15,15 @@
   position: absolute;
   display: flex;
   top: 50%;
-  width: 27px;
-  height: 13px;
+  width: rem(27px);
+  height: rem(13px);
 
   &__left{
-    left: 40px;
+    left: rem(-10px);
   }
 
   &__right{
-    right: 60px;
+    right: rem(-10px);
   }
 }
 
@@ -38,7 +38,7 @@
   display: flex;
   justify-content: center;
   width: 50%;
-  padding: 28px;
+  padding: rem(28px);
   position: relative;
 }
 
@@ -57,18 +57,18 @@
 
 // Блок "Описание бургера"
 .burgers-main__descr{
-  width: 412px;
+  width: rem(412px);
   .title{
-    margin-bottom: 52px;
+    margin-bottom: rem(52px);
   }
 }
 
 .burgers-main__text{
   color: $white;
   font-family: 'Ubuntu';
-  font-size: 14px;
-  line-height: 25px;
-  margin-bottom: 40px;
+  font-size: rem(14px);
+  line-height: rem(25px);
+  margin-bottom: rem(40px);
 }
 
 .burgers-main__order{
@@ -76,16 +76,16 @@
 }
 
 .burgers-main__price{
-  margin-right: 32px;
+  margin-right: rem(32px);
 }
 
 .burger-currency{
-  font-size: 22px;
+  font-size: rem(22px);
 }
 
 .burgers-button{
-  margin-top: 40px;
+  margin-top: rem(40px);
   .button{
-    width: 95px;
+    width: rem(95px);
   }
 }
