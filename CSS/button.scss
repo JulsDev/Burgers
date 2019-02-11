@@ -1,7 +1,7 @@
 // лучше задавать padding вместо точных размеров, т.к. может поменяться текст внутри кнопки
 
 .button{
-  padding: rem(13px) rem(15px);
+  padding: rem(12px) rem(15px);
   background: $red;
   border-radius: 5px;
   color: #ffffff;

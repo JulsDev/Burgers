@@ -15,10 +15,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-right: rem(25px);
 }
 
+.menu,
 .menu_list{
   display: flex;
+
+  @include tablets(){
+    display: none;
+  }
 }
 
 .menu_item{

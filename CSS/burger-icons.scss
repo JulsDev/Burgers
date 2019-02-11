@@ -63,3 +63,8 @@
 .display-icon:hover + .burger-consist_hover{
   opacity: 1;
 }
+
+.display-icon-burg:hover{
+  background-color: $dark-red;
+  cursor: pointer;
+}

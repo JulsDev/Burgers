@@ -8,15 +8,30 @@
 
 .best__list{
   display: flex;
+
+  @include phones(){
+    flex-direction: column;
+  }
 }
 
 .best__item{
+  display: flex;
+  flex-direction: column;
   text-align: center;
   width: 33.3%;
-  margin-right: rem(36px);
 
   &:last-child{
     margin-right: 0px;
+  }
+
+  @include phones {
+    width: auto;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: left;
+    margin-left: rem(38px);
+    margin-bottom: rem(45px);
   }
 }
 
@@ -31,6 +46,13 @@
   justify-content: flex-start;
   height: rem(125px);
   padding-bottom: rem(37px);
+}
+
+.best__descr{
+  @include phones {
+    text-align: left;
+    max-width: rem(320px); 
+  }
 }
 
 .best__descr-title{

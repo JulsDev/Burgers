@@ -6,9 +6,6 @@
 .reviews__list{
   display: flex;
   flex-wrap: wrap;
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -27,6 +24,11 @@
       opacity: 1;
     }
   }
+
+  @include tablets(){
+    width: 50%;
+    height: 25%;
+  }
 }
 
 .reviews__item-hover{
@@ -39,19 +41,56 @@
   padding: rem(50px) rem(20px);
   opacity: 0;
   transition: opasity .3s;
+
+  
+  @include tablets(){
+    text-align: center;
+    padding: rem(25px) rem(52px) rem(21px);   
+  }
+  @include phones(){
+    text-align: center;
+    padding: rem(43px) rem(55px);  
+  }
 }
 
 .reviews__title{
   font-family: 'Gagalin';
   font-weight: 400;
   line-height: rem(28.11px);
+  margin-bottom: rem(17px);
+  
+  @include tablets(){
+    margin-bottom: 0px;
+    line-height: rem(20px);
+  }
+  @include phones(){
+    font-size: rem(20px);
+    margin-bottom: rem(28px);
+  }
 }
+
 .reviews__text{
   font-family: 'Ubuntu';
   font-weight: 300;
   line-height: rem(24px);
   padding: rem(17px) auto;
-  margin-top: rem(17px);
   margin-bottom: rem(30px);
+
+  @include tablets(){
+    font-size: rem(10px);
+    line-height: rem(18px);
+  }
+  @include phones(){
+    display: none;
+  }
 }
 
+.reviews__button{
+  @include tablets(){
+    font-size: rem(10px);
+  }
+  @include phones(){
+    font-size: rem(12px);
+    padding: rem(12px);
+  }
+}

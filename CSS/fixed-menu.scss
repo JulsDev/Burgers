@@ -3,6 +3,10 @@
   position: fixed;
   top: rem(88px);
   right: rem(48px);
+
+  @include tablets(){
+    display: none;
+  }
 }
 
 .fixed-menu__item{

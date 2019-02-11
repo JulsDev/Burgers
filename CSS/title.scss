@@ -16,4 +16,9 @@
   &_red{
     color: $red;
   }
+
+  @include tablets(){
+    font-size: rem(52px);
+  }
+
 }

@@ -22,11 +22,25 @@
   .title{
     margin-bottom: rem(46px);
   }
+
+  @include tablets(){
+    width: 100%;
+  }
+}
+
+.team__list{
+  @include tablets(){
+    text-align: center;
+  }
 }
 
 .team__item{
   display: block;
   margin-bottom: rem(35px);
+
+  @include tablets(){
+    margin-bottom: 0;
+  }
 }
 
 .team__item-person{
@@ -49,6 +63,10 @@
     background: url('../img/team/Polygon_1.png') center center no-repeat;
     margin-right: rem(10px);
   }
+  
+  @include tablets{
+    font-size: rem(22px);
+  }
 }
 
 .team__item-block{
@@ -58,7 +76,7 @@
 }
 
 .photo__person{
-  margin: rem(0px) rem(21px);
+  margin: 0 rem(21px);
   width: rem(100px);
   height: rem(100px);
   border-radius: 50%;
@@ -95,5 +113,11 @@
 
   .team__item-block{
     height: rem(100px);
+
+    @include tablets {
+      flex-direction: column;
+      align-items: center;
+      height: rem(250px);
+    }
   }
 }

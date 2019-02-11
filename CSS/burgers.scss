@@ -32,14 +32,28 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+
+  @include tablets(){
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-.burgers-main__image{
-  display: flex;
-  justify-content: center;
+.burgers-main__image,
+.burgers-main__descr{
   width: 50%;
+}
+.burgers-main__image{
+  margin: rem(28px);
   padding: rem(28px);
   position: relative;
+
+  @include tablets {
+    max-width: 85%;
+  }
+  @include phones {
+    max-width: 70%;
+  }
 }
 
 // Иконки на бургере
@@ -54,6 +68,10 @@
   bottom: 0;
 }
 
+.burger-consist_hover{
+  top: 0;
+  left: rem(90px);
+}
 
 // Блок "Описание бургера"
 .burgers-main__descr{

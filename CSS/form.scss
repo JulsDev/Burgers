@@ -5,14 +5,32 @@
   background-size: cover;
 }
 
+.form .title{
+  @include phones(){
+    text-align: center;
+  }
+}
 .order_form{
   display: flex;
   margin: rem(50px) rem(0px);
+
+  @include tablets(){
+    flex-direction: column;
+  }
 }
 
-.order_form-data,
-.order_form-comment{
+.order_form-col{
   width: 50%;
+
+  @include tablets(){
+    width: initial;
+    margin: 0 rem(125px);
+  }
+
+  @include phones(){
+    width: initial;
+    margin: 0;
+  }
 }
 
 .form__row{
@@ -43,7 +61,7 @@
 }
 
 .form__text{
-  resize: none;
+  // resize: none;
   width: 100%;
   height: rem(109px);
   border-radius: rem(5px);
@@ -63,6 +81,11 @@
   display: flex;
   align-items: center;
   margin-bottom: rem(20px);
+
+  @include phones(){
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .block-radio{
@@ -143,5 +166,12 @@
 .button__clear{
   color: $white;
   outline: none;
+}
+
+.form__block-btn{
+  @include phones(){
+    display: flex;
+    justify-content: center;
+  }
 }
 

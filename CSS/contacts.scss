@@ -24,6 +24,12 @@
   font-weight: 300;
   font-size: rem(14px);
   line-height: rem(24px);
+
+  @include phones(){
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .footer__contacts,
@@ -31,6 +37,12 @@
   width: 50%;
 }
 
+.footer__contacts{
+  @include phones(){
+    min-width: rem(280px);
+    text-align: center;
+  }
+}
 .footer__phone{
   display: inline-flex;
   align-items: center;
@@ -48,7 +60,12 @@
 .social__list{
   display: flex;
   justify-content: flex-end;
+
+  @include phones(){
+    justify-content: center;
+  }
 }
+
 
 .social__item{
   margin-top: rem(10px);
