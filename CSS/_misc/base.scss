@@ -1,33 +1,42 @@
 html{
-  width: 100%;
   height: 100%;
+  font-size: rem(16px);
+
+  @include tablets(){
+    font-size: rem(14px);
+  }
+
+  @include phones(){
+    font-size: rem(13px);
+  }
 }
 
 body{
-  width: 100%;
   height: 100%;
   margin: 0;          /* у body по умолчанию отступы 8px */
   background: $white; 
-  font-size: 14px;
+  font-size: rem(14px);
   font-family: 'Ubuntu';
 }
 
 .wrapper {
+  position: relative;
   overflow: hidden;
   width: 100%;
-  min-width: 945px;
+  //min-width: 945px;
   min-height: 100%;
 }
 
 .container{
-  width: 945px;
+  position: relative;
   margin: 0 auto;
-  // padding-top: 12px;
+  width: 95%;
+  max-width: 945px;
 }
 
 .section{
   height: 100vh;
-  min-height: 650px;
+  min-height: rem(650px);
 
   &_centered{
     .container{

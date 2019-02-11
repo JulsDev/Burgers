@@ -1,22 +1,36 @@
 
+// color
 $red: #e45028;
 $dark-red: #c1401e;
 $orange: #f9b43b;
 $black: #2f3234;
 $white: #ffffff;
 
-@import "./normalize.scss";
-@import "./fonts.scss";
-@import "./base.scss";
+
+// breakpoints
+$tablets: 768px;
+$phones: 480px;
+
+
+// import
+@import "./_misc/media.scss";
+@import "./_misc/normalize.scss";
+@import "./_misc/fonts.scss";
+@import "./_misc/base.scss";
 
 @import "./header.scss";
 @import "./button.scss";
+@import "./humburger-menu.scss";
 @import "./hero.scss";
 @import "./title.scss";
 @import "./best.scss";
+@import "./burger-icons.scss";
+@import "./burgers.scss";
+@import "./composition.scss";
 @import "./team.scss";
 @import "./menu.scss";
 @import "./reviews.scss";
+@import "./work.scss";
 @import "./form.scss";
 @import "./contacts.scss";
 @import "./fixed-menu.scss";

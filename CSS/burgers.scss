@@ -1,0 +1,109 @@
+
+.burgers{
+  background:#466368;
+  background-image: linear-gradient(#ffcc33 0%, #ff9933 50%, #ffcc33 100%);
+  position: relative;
+}
+
+.slider__container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-arrow{
+  position: absolute;
+  display: flex;
+  top: 50%;
+  width: rem(27px);
+  height: rem(13px);
+
+  &__left{
+    left: rem(-10px);
+  }
+
+  &__right{
+    right: rem(-10px);
+  }
+}
+
+.burgers-main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  @include tablets(){
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.burgers-main__image,
+.burgers-main__descr{
+  width: 50%;
+}
+.burgers-main__image{
+  margin: rem(28px);
+  padding: rem(28px);
+  position: relative;
+
+  @include tablets {
+    max-width: 85%;
+  }
+  @include phones {
+    max-width: 70%;
+  }
+}
+
+// Иконки на бургере
+.display-icon-burg{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.display-icon-kkal{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.burger-consist_hover{
+  top: 0;
+  left: rem(90px);
+}
+
+// Блок "Описание бургера"
+.burgers-main__descr{
+  width: rem(412px);
+  .title{
+    margin-bottom: rem(52px);
+  }
+}
+
+.burgers-main__text{
+  color: $white;
+  font-family: 'Ubuntu';
+  font-size: rem(14px);
+  line-height: rem(25px);
+  margin-bottom: rem(40px);
+}
+
+.burgers-main__order{
+  display: flex; 
+}
+
+.burgers-main__price{
+  margin-right: rem(32px);
+}
+
+.burger-currency{
+  font-size: rem(22px);
+}
+
+.burgers-button{
+  margin-top: rem(40px);
+  .button{
+    width: rem(95px);
+  }
+}
