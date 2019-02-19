@@ -27,7 +27,6 @@
 
 .menu-slider__item{
   display: flex;
-  width: rem(80px);
 }
 
 .menu__item-title{
@@ -57,13 +56,23 @@
 
 .menu__item-content{
    background-color: rgba(47, 50, 52, 0.929);
-   max-width: 0;
-   color: $white;
-   font-family: 'Ubuntu';
-   font-weight: 300;
-   line-height: 1.714;
+   width: 0px;
    visibility: hidden;
    opacity: 0;
    transition: 1s;
-   transition-property: max-width, opacity, visibility;   
+   transition-property: width, opacity, visibility;   
+}
+
+.menu__item-text{
+  color: $white;
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  line-height: 1.714;
+  width: rem(540px);
+  padding: rem(62px) rem(32px);
+  
+  @include tablets(){
+    width: rem(340px);
+    padding: rem(52px) rem(22px);
+  }
 }

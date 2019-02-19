@@ -39,19 +39,27 @@
   display: inline-flex;
   justify-content: center;
   vertical-align: middle;
+  width: 7rem;
+  height: 9.5rem;
+
+  @include phones{
+    min-width: 8rem;
+    padding-left: 7rem;
+  }
 }
 
 .best__icon{
   display: inline-block;
   justify-content: flex-start;
-  height: rem(125px);
-  padding-bottom: rem(37px);
+  // padding-bottom: 2.3rem;
+  width: 8rem;
+  height: 9.5rem; 
 }
 
 .best__descr{
   @include phones {
     text-align: left;
-    max-width: rem(320px); 
+    max-width: 20rem; 
   }
 }
 

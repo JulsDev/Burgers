@@ -5,56 +5,70 @@
   position: relative;
 }
 
-.slider__container{
+.burgers__container,
+.burgers__slider{
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .slider-arrow{
-  position: absolute;
-  display: flex;
-  top: 50%;
-  width: rem(27px);
-  height: rem(13px);
-
-  &__left{
-    left: rem(-10px);
-  }
-
-  &__right{
-    right: rem(-10px);
-  }
-}
-
-.burgers-main{
   display: flex;
   justify-content: center;
+  width: rem(27px);
+  height: rem(13px);
+}
+
+.burger__list{
+  display: flex;
+}
+
+.burger__item{
+  display: flex;
   align-items: center;
   width: 100%;
+  margin: rem(40px) auto;
 
   @include tablets(){
     flex-direction: column;
     align-items: center;
+    height: inherit;
   }
 }
 
-.burgers-main__image,
-.burgers-main__descr{
+.burger__item-col{
   width: 50%;
-}
-.burgers-main__image{
-  margin: rem(28px);
-  padding: rem(28px);
-  position: relative;
 
-  @include tablets {
-    max-width: 85%;
-  }
-  @include phones {
-    max-width: 70%;
+  @include tablets(){
+    width: 100%;
   }
 }
+
+.item-col__image{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 90px 0;
+  height: 100%;
+  margin-right: rem(30px);
+
+  @include tablets(){
+    padding-bottom: 0;
+    height: inherit;
+  }
+}
+
+.burger__image{
+  max-width: 100%;
+  @include tablets() {
+    max-width: 92%;
+    padding-left: 70px;
+  }
+  // @include phones() {
+  //   max-width: 88%;
+  // }
+}
+
 
 // Иконки на бургере
 .display-icon-burg{
@@ -66,6 +80,13 @@
   position: absolute;
   left: 0;
   bottom: 0;
+
+  @include tablets{
+    top: 0;
+    right: 0;
+    left: initial;
+    min-width: rem(90px);
+  }
 }
 
 .burger-consist_hover{
@@ -74,10 +95,26 @@
 }
 
 // Блок "Описание бургера"
-.burgers-main__descr{
+.item-col__descr{
+  display: flex;
+  flex-direction: column;
   width: rem(412px);
+    
+  @include tablets{
+    text-align: center;
+  }
+  
   .title{
     margin-bottom: rem(52px);
+    @include tablets{
+      margin-bottom: 0rem;
+    }
+  }
+}
+
+.burger-type{
+  @include tablets(){
+    font-size: rem(42px);
   }
 }
 
@@ -87,10 +124,18 @@
   font-size: rem(14px);
   line-height: rem(25px);
   margin-bottom: rem(40px);
+
+  @include tablets{
+    margin-bottom: rem(20px);
+  }
 }
 
 .burgers-main__order{
   display: flex; 
+  
+  @include tablets{
+    justify-content: center;
+  }
 }
 
 .burgers-main__price{
@@ -106,4 +151,5 @@
   .button{
     width: rem(95px);
   }
+
 }
