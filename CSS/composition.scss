@@ -23,8 +23,6 @@
 }
 
 .composition__image{
-  // width: 50px;
-  // height: 50px;
   padding-right: rem(25px);
 }
 .composition__icon{
@@ -38,3 +36,18 @@
 .composition__weight{
   text-align: right;
 }
+
+
+.composition__icon-beef,
+.composition__icon-sauce{
+  fill: $red;
+}
+.composition__icon-buns,
+.composition__icon-chees{
+  fill: $yellow;
+}
+.composition__icon-salad,
+.composition__icon-cucumber{
+  fill: $green;
+}
+

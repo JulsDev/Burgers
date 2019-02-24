@@ -51,9 +51,19 @@
 .best__icon{
   display: inline-block;
   justify-content: flex-start;
-  // padding-bottom: 2.3rem;
-  width: 8rem;
-  height: 9.5rem; 
+  padding-bottom: rem(30px);
+  width: rem(105px);
+  height: rem(95px);
+
+  &-meat{
+    fill: $red;
+  }
+  &-hand{
+    fill: $yellow;
+  }
+  &-natural{
+    fill: $green;
+  }
 }
 
 .best__descr{
