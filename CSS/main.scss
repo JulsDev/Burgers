@@ -5,6 +5,8 @@ $dark-red: #c1401e;
 $orange: #f9b43b;
 $black: #2f3234;
 $white: #ffffff;
+$yellow: #ffcc33;
+$green: #99cc33;
 
 
 // breakpoints
@@ -30,6 +32,7 @@ $phones: 480px;
 @import "./team.scss";
 @import "./menu.scss";
 @import "./reviews.scss";
+@import "./modal-window.scss";
 @import "./work.scss";
 @import "./form.scss";
 @import "./contacts.scss";

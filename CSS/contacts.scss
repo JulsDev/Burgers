@@ -55,6 +55,12 @@
     color: $red;
     font-weight: 700;
   }
+
+  &-icon{
+    fill: $red;
+    width: rem(15px);
+    height: rem(12px);
+  }
 }
 
 .social__list{
@@ -66,7 +72,6 @@
   }
 }
 
-
 .social__item{
   margin-top: rem(10px);
   margin-right: rem(18px);
@@ -75,8 +80,10 @@
 .social__link{
   fill: $white;
   opacity: .2;
-
+  width: rem(25px);
+  height: rem(25px);
 }
 .social__link-active{
   fill: $white;
+  opacity: 1;
 }

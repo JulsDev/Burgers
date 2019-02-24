@@ -9,6 +9,7 @@
 .logo{
   width: rem(92px);
   height: rem(69px);
+  z-index: 3;
 }
 
 .header__button{
@@ -56,3 +57,4 @@
   text-transform: uppercase;
   font-weight: 500;
 }
+

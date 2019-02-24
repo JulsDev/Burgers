@@ -17,12 +17,17 @@
   border-radius: 5px;
   padding: rem(10px);
   background-color: $red;
-  opacity: 0.4;
+  opacity: 0.5;
+
+  @include tablets{
+    margin-left: rem(50px);
+  }
 }
 
 .burgers-icon-burg{
   width: rem(46px);
   height: rem(44px);
+  fill: $white;
 }
 
 .title-text{
@@ -37,7 +42,7 @@
   border-radius: 5px;
   padding: rem(10px);
   background-color: none;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .burgers-icon-kkal{

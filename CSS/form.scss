@@ -60,7 +60,7 @@
   line-height: rem(24px);
 }
 
-.form__text{
+.comment{
   // resize: none;
   width: 100%;
   height: rem(109px);
@@ -69,13 +69,17 @@
   background-color: #d1cfcb;
 }
 
-.form__text:focus,
+.comment:focus,
 .form__block-input:focus{
   border: 1px solid #f89513;
   outline: none !important;
 }
 
-
+// Относится  к полям, у которых выставлено required
+input:invalid,
+.comment:invalid {
+  border: 2px solid red;
+}
 
 .form__block-choise{
   display: flex;
@@ -143,7 +147,6 @@
   color: #e35028;
 }
 
-
 // Стилизуем новый чекбокс
 .checkbox:checked+.checkbox-custom::before{
   content: "";
@@ -159,7 +162,8 @@
 	-moz-transform: rotate(-55deg);
 	-o-transform: rotate(-55deg);
 	-ms-transform: rotate(-55deg);
-	transform: rotate(-55deg);
+  transform: rotate(-55deg);
+  opacity: 1;
 }
 
 .form .button,

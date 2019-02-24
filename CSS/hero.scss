@@ -2,14 +2,23 @@
   background: url('../img/hero/hero_texture.png') center center no-repeat fixed,
               url('../img/hero/hero_bg.jpg') center center no-repeat fixed;
   background-size: cover;
+  position: relative;
 }
+
+// .menu-hover{
+//   width: 100%;
+//   height: 100%;
+//   position: absolute;
+//   background-color: #333333;
+//   display: none;
+// }
+s
 
 .hero__container{
   display: flex;
   flex-direction: column;
   flex: 1;
   justify-content: center;
-  // align-items: center;
   padding-bottom: rem(20px);
 }
 
@@ -19,7 +28,6 @@
 
   @include tablets(){
     flex-direction: column;
-    // justify-content: center;
     align-items: center;
   }
 }
@@ -91,3 +99,5 @@
   width: rem(29px);
   height: rem(14px);
 }
+
+
