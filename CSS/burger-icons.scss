@@ -18,6 +18,10 @@
   padding: rem(10px);
   background-color: $red;
   opacity: 0.5;
+
+  @include tablets{
+    margin-left: rem(50px);
+  }
 }
 
 .burgers-icon-burg{

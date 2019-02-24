@@ -3,31 +3,51 @@
   background:#466368;
   background-image: linear-gradient(#ffcc33 0%, #ff9933 50%, #ffcc33 100%);
   position: relative;
+
+  @include tablets{
+    padding: auto rem(100px);
+  }
 }
 
-.burgers__container,
-.burgers__slider{
+.burgers__container{
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: rem(940px);
+  overflow: hidden;
 }
 
 .slider-arrow{
-  display: flex;
-  justify-content: center;
+  position: absolute;
   width: rem(27px);
   height: rem(13px);
+
+  &__left{
+    top: 50%;  
+    left: 10%;    
+    z-index:5;
+  }
+
+  &__right{
+    top:50%;
+    right:10%;
+    z-index:5;
+  }
 }
 
 .burger__list{
   display: flex;
+  justify-content: center;
+  
 }
 
 .burger__item{
   display: flex;
   align-items: center;
-  width: 100%;
+  width: rem(940px);
   margin: rem(40px) auto;
+  flex-grow:0;
+  flex-shrink:0;
 
   @include tablets(){
     flex-direction: column;
@@ -44,16 +64,18 @@
   }
 }
 
+
 .item-col__image{
   display: flex;
   justify-content: center;
   position: relative;
-  padding: 90px 0;
+  padding: rem(90px) 0;
   height: 100%;
   margin-right: rem(30px);
 
   @include tablets(){
     padding-bottom: 0;
+    padding-left: rem(90px);
     height: inherit;
   }
 }
@@ -61,12 +83,8 @@
 .burger__image{
   max-width: 100%;
   @include tablets() {
-    max-width: 92%;
-    padding-left: 70px;
+    max-width: 80%;
   }
-  // @include phones() {
-  //   max-width: 88%;
-  // }
 }
 
 
