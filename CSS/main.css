@@ -128,7 +128,9 @@ html { height: 100%; font-size: 1rem; }
 
 body { height: 100%; margin: 0; /* у body по умолчанию отступы 8px */ background: #ffffff; font-size: 0.875rem; font-family: 'Ubuntu'; }
 
-.wrapper { position: relative; overflow: hidden; width: 100%; min-height: 100%; }
+.wrapper { position: relative; overflow: hidden; width: 100%; height: 100%; }
+
+.maincontent { height: 100%; -webkit-transform: translateY(); -ms-transform: translateY(); transform: translateY(); }
 
 .container { position: relative; margin: 0 auto; width: 95%; max-width: 945px; }
 
@@ -316,11 +318,11 @@ s .hero__container { display: -webkit-box; display: -ms-flexbox; display: flex; 
 
 .slider-arrow__right { top: 50%; right: 10%; z-index: 5; }
 
-.burger__list { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+.burger__slider, .burger__list { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 100%; }
 
 .burger__item { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 58.75rem; margin: 2.5rem auto; -webkit-box-flex: 0; -ms-flex-positive: 0; flex-grow: 0; -ms-flex-negative: 0; flex-shrink: 0; }
 
-@media screen and (max-width: 768px) { .burger__item { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: inherit; } }
+@media screen and (max-width: 768px) { .burger__item { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: inherit; height: inherit; } }
 
 .burger__item-col { width: 50%; }
 
@@ -328,11 +330,13 @@ s .hero__container { display: -webkit-box; display: -ms-flexbox; display: flex; 
 
 .item-col__image { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; position: relative; padding: 5.625rem 0; height: 100%; margin-right: 1.875rem; }
 
-@media screen and (max-width: 768px) { .item-col__image { padding-bottom: 0; padding-left: 5.625rem; height: inherit; } }
+@media screen and (max-width: 768px) { .item-col__image { padding-bottom: 0; padding-left: 8.625rem; height: inherit; } }
 
-.burger__image { max-width: 100%; }
+.burger__image { max-width: 100%; width: 26.875rem; height: 20rem; }
 
 @media screen and (max-width: 768px) { .burger__image { max-width: 80%; } }
+
+@media screen and (max-width: 480px) { .burger__image { max-width: 70%; } }
 
 .display-icon-burg { position: absolute; top: 0; left: 0; }
 
@@ -342,13 +346,15 @@ s .hero__container { display: -webkit-box; display: -ms-flexbox; display: flex; 
 
 .burger-consist_hover { top: 0; left: 5.625rem; }
 
+@media screen and (max-width: 768px) { .burger-consist_hover { margin-left: 2.8125rem; } }
+
 .item-col__descr { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; width: 25.75rem; }
 
 @media screen and (max-width: 768px) { .item-col__descr { text-align: center; } }
 
 .item-col__descr .title { margin-bottom: 3.25rem; }
 
-@media screen and (max-width: 768px) { .item-col__descr .title { margin-bottom: 0rem; } }
+@media screen and (max-width: 768px) { .item-col__descr .title { margin-bottom: 0rem; line-height: 2.5rem; } }
 
 @media screen and (max-width: 768px) { .burger-type { font-size: 2.625rem; } }
 
@@ -376,8 +382,6 @@ s .hero__container { display: -webkit-box; display: -ms-flexbox; display: flex; 
 
 .composition__item:last-child { padding-bottom: 0px; }
 
-.composition__image { padding-right: 1.5625rem; }
-
 .composition__icon { width: 48px; height: 43px; }
 
 .composition__text { font-weight: 500; }
@@ -386,7 +390,7 @@ s .hero__container { display: -webkit-box; display: -ms-flexbox; display: flex; 
 
 .composition__icon-beef, .composition__icon-sauce { fill: #e45028; }
 
-.composition__icon-buns, .composition__icon-chees { fill: #ffcc33; }
+.composition__icon-buns, .composition__icon-cheese { fill: #ffcc33; }
 
 .composition__icon-salad, .composition__icon-cucumber { fill: #99cc33; }
 
