@@ -1,72 +1,58 @@
 
 $(document).ready(function(){
-  $('.slider-arrow__left').on('click', function(event){
-    event.preventDefault();
 
-      $this = $(this);
-      container = $this.next();
- 
-      // Сохраняем слайдер в контейнер
-      slider = container.find('.burger__slider');
+// Двигаем слайды
+var moveSlide = function(container, slideNum){ 
+        // Сохраняем слайдер в контейнер
+        slider = container.find('.burger__slider');
+        // Находим все элементы в контейнере
+        items = slider.find('.burger__item');
+        // Сохраняем активный элемент
+        activeSlide = items.filter('.active');
+        reqItem = items.eq(slideNum);
+        reqIndex = reqItem.index();
+        // Доступ к элементу, который будем двигать
+        list = slider.find('.burger__list');
 
-      // Находим все элементы в контейнере
-      items = slider.find('.burger__item');
-      // Сохраняем активный элемент
-      activeSlide = items.filter('.active');
-
-      // Доступ к следующему элементу (после активного)
-      reqItem = activeSlide.prev();
-      // Доступ к порядковому номеру этого элемента
-      reqIndex = reqItem.index();
-      // Доступ к элементу, который будем двигать
-      list = slider.find('.burger__list');
-      // Задаем время анимации
-      animationTime = 500;
-
-      // ---- Анимация -----//
-      // Если слайд не последний
-      if(reqItem.length){ 
-        list.animate({'left': -reqIndex * 100 + '%' }, animationTime, function(){
-            activeSlide.removeClass('active');
-            reqItem.addClass('active');
+        // ---- Анимация -----//
+        animationTime = 500;
+        // Если слайд не последний
+        if(reqItem.length){ 
+          list.animate({'left': -reqIndex * 100 + '%' }, animationTime, function(){
+              activeSlide.removeClass('active');
+              reqItem.addClass('active');
           });
-      }
-  });
+        }
+}
 
 
-  $('.slider-arrow__right').on('click', function(event){
-    event.preventDefault();
+$('.slider-arrow').on('click', function(event){
+  event.preventDefault();
 
-      $this = $(this);
-      container = $this.prev();
- 
-      // Сохраняем слайдер в контейнер
-      slider = container.find('.burger__slider');
+  var $this = $(this);
+  container = $this.siblings('.container');
+  slider = container.find('.burger__slider');
+  activeItem = slider.find('.burger__item').filter('.active');
+  nextItem = activeItem.next();
+  prevItem = activeItem.prev();
+  
+  if($this.hasClass('slider-arrow__right')){
+    if(nextItem.length){
+      moveSlide(container, nextItem.index());
+    }else{
+      moveSlide(container, 0);
+    }
+  };
 
-      // Находим все элементы в контейнере
-      items = slider.find('.burger__item');
-      // Сохраняем активный элемент
-      activeSlide = items.filter('.active');
-
-      // Доступ к следующему элементу (после активного)
-      reqItem = activeSlide.next();
-      // Доступ к порядковому номеру этого элемента
-      reqIndex = reqItem.index();
-      // Доступ к элементу, который будем двигать
-      list = slider.find('.burger__list');
-      // Задаем время анимации
-      animationTime = 500;
-
-      // ---- Анимация -----//
-      // Если слайд не последний
-      if(reqItem.length){ 
-        list.animate({'right': reqIndex * 100 + '%' }, animationTime, function(){
-            activeSlide.removeClass('active');
-            reqItem.addClass('active');
-          });
-      }
-  });
-
+  if($this.hasClass('slider-arrow__left')){
+     if(prevItem.length){
+       moveSlide(container, prevItem.index());
+     }else{
+       moveSlide(container, prevItem.last().index());
+     }
+  };
 });
+});
+
 
 
