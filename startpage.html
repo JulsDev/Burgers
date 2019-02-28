@@ -14,6 +14,9 @@
 
       <!-- Скрытое меню в гамбургере -->
       <div class="humburger_menu_hover">
+          <div class="humburger_menu-logo">
+            <img src="./img/icons/logo.svg" alt="logo" class="logo__image">
+          </div>
           <ul class="menu__list">
             <li class="menu__item">
               <a href="#" class="menu_link">о нас</a>
@@ -49,7 +52,7 @@
       <div class="maincontent">
         
         <!-- Секция: Стартовая -->
-        <section class="section hero">
+        <section class="section hero active">
           <div class="container">
               <div class="header">
         
@@ -60,31 +63,31 @@
                   <nav class="menu">
                       <ul class="menu_list">
                           <li class="menu_item">
-                            <a href="#" class="menu_link">о нас</a>
+                            <a class="menu_link" href data-scroll-to="2">о нас</a>
                           </li>
                           <li class="menu_item">
-                            <a href="#" class="menu_link">бургеры</a>
+                            <a class="menu_link" href data-scroll-to="3">бургеры</a>
                           </li>
                           <li class="menu_item">
-                            <a href="#" class="menu_link">команда</a>
+                            <a class="menu_link" href data-scroll-to="4">команда</a>
                           </li>
                           <li class="menu_item">
-                            <a href="#" class="menu_link">меню</a>
+                            <a class="menu_link" href data-scroll-to="5">меню</a>
                           </li>
                           <li class="menu_item">
-                            <a href="#" class="menu_link">отзывы</a>
+                            <a class="menu_link" href data-scroll-to="6">отзывы</a>
                           </li>
                           <li class="menu_item">
-                            <a href="#" class="menu_link">как мы работаем</a>
+                            <a class="menu_link" href data-scroll-to="7">как мы работаем</a>
                           </li>
                           <li class="menu_item">
-                            <a href="#" class="menu_link">контакты</a>
+                            <a class="menu_link" href data-scroll-to="9">контакты</a>
                           </li>  
                       </ul>
                   </nav>
 
                   <div class="header__button">
-                      <a href="#" class="button hero__order-button">заказать</a>
+                      <a class="button hero__order-button" href data-scroll-to="8">заказать</a>
                       <a href="#" class="humburger_menu">
                         <span class="humburger_menu-line"></span>
                         <span class="humburger_menu-line"></span>
@@ -963,7 +966,61 @@
         </section>
 
         <!-- Секция: Как мы работаем -->
-        <section class="section work"></section>
+        <section class="section section_centered work">
+          <div class="container">
+            
+            <div class="work_block">
+              <h2 class="title title_black">как мы работаем</h2>
+              
+              <div id="video_player-block">
+                
+                <div class="video_player-wrapper">
+                  <div id="video_player-id"></div>
+                
+                  <div class="video__player-btn">
+                    <svg class="video__player-icon">
+                        <use xlink:href="./img/sprite.svg#play"></use>
+                    </svg>
+                  </div>
+              
+                  <div class="video_player-controls">
+                    
+                    <div class="controls-playpause">
+                      <div class="video__playpause-btn">
+                          <svg class="video__icon video__icon--on">
+                              <use xlink:href="./img/sprite.svg#play-button"></use>
+                          </svg>
+                          <svg class="video__icon video__icon--pause">
+                              <use xlink:href="./img/sprite.svg#pause"></use>
+                          </svg>
+                      </div>
+                      
+                      <div class="video__progress-bar">
+                         <div class="video__progress-current"></div>
+                      </div>
+                    </div>
+
+                    <div class="controls-volume">
+                      <div class="video__volume-btn">
+                        <svg class="video__icon volume__icon--on">
+                            <use xlink:href="./img/sprite.svg#volume"></use>
+                        </svg>
+                        <!-- <svg class="video__icon volume-icon--off">
+                            <use xlink:href="./assets/img/sprite.svg#mute"></use>
+                        </svg> -->
+                      </div>
+                      
+                      <div class="video__volume-bar">
+                        <div class="video__volume-current"></div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <!-- Секция: Закажите доставку -->
         <section class="section section_centered form">
@@ -1060,12 +1117,9 @@
         <section class="section contacts">
           <div class="contacts__content"></div>    
           
-          <div class="footer">
-            
+          <div class="footer"> 
             <div class="footer__contacts">
-              
               <div class="footer__adress">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
-              
               <div class="footer__phone">
                 <div class="footer__phone-image">
                   <svg class="footer__phone-icon">
@@ -1076,7 +1130,6 @@
                   <a href="tel:+78123771377" class="footer__phone-number">+7 (812) 377-13-77</a>
                 </div>
               </div>
-
             </div>
 
             <div class="footer__social">
@@ -1109,15 +1162,33 @@
         <!-- Секция: Боковое меню -->
         <nav class="fixed-menu">
           <ul class="fixed-menu__list">
-            <li class="fixed-menu__item"></li>
-            <li class="fixed-menu__item"></li>
-            <li class="fixed-menu__item"></li>
-            <li class="fixed-menu__item"></li>
-            <li class="fixed-menu__item"></li>
-            <li class="fixed-menu__item"></li>
-            <li class="fixed-menu__item"></li>
-            <li class="fixed-menu__item"></li>
-            <li class="fixed-menu__item"></li>
+            <li class="fixed-menu__item active">
+              <a class="fixed-menu__link" href data-scroll-to="1">-</a>
+            </li>
+            <li class="fixed-menu__item">
+              <a class="fixed-menu__link" href data-scroll-to="2">-</a>
+            </li>
+            <li class="fixed-menu__item">
+              <a class="fixed-menu__link" href data-scroll-to="3">-</a>
+            </li>
+            <li class="fixed-menu__item">
+              <a class="fixed-menu__link" href data-scroll-to="4">-</a>
+            </li>
+            <li class="fixed-menu__item">
+              <a class="fixed-menu__link" href data-scroll-to="5">-</a>
+            </li>
+            <li class="fixed-menu__item">
+              <a class="fixed-menu__link" href data-scroll-to="6">-</a>
+            </li>
+            <li class="fixed-menu__item">
+              <a class="fixed-menu__link" href data-scroll-to="7">-</a>
+            </li>
+            <li class="fixed-menu__item">
+              <a class="fixed-menu__link" href data-scroll-to="8">-</a>
+            </li>
+            <li class="fixed-menu__item">
+              <a class="fixed-menu__link" href data-scroll-to="9">-</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -1142,7 +1213,10 @@
         </div>
      </div>
 
-   <script src="./js__scripts/jquery-3.3.1.min.js" type="text/javascript"></script>
+   <script src="./js__scripts/jquery-3.3.1.min.js"></script>
+   <script src="./js__scripts/jquery.touchSwipe.min.js"></script>
+   <script src="./js__scripts/mobile-detect.min.js"></script>
+
    <script src="./js__scripts/humburger-menu.js"></script>
    <script src="./js__scripts/accordeon-menu.js"></script>
    <script src="./js__scripts/accordeon-team.js"></script>
@@ -1150,6 +1224,8 @@
    <script src="./js__scripts/sliderBurgers_JQuery.js"></script>
    <script src="./js__scripts/modal-window.js"></script>
    <script src="./js__scripts/form-send.js"></script>
-   <!-- <script src="./js__scripts/OnePageScroll.js"></script> -->
+   <script src="./js__scripts/OnePageScroll.js"></script>
+   <script src="./js__scripts/video.js"></script>
+   <script src="https://www.youtube.com/iframe_api"></script>
 </body>
 </html>

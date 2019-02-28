@@ -82,8 +82,9 @@ s
 }
 
 .arrow-scroll{
-  display: flex;
-  justify-content: center; 
+  position: absolute;
+  right: 50%;
+  bottom: -20%;
   padding-top: rem(95px);
 
   @include tablets(){
