@@ -966,7 +966,61 @@
         </section>
 
         <!-- Секция: Как мы работаем -->
-        <section class="section work"></section>
+        <section class="section section_centered work">
+          <div class="container">
+            
+            <div class="work_block">
+              <h2 class="title title_black">как мы работаем</h2>
+              
+              <div id="video_player-block">
+                
+                <div class="video_player-wrapper">
+                  <div id="video_player-id"></div>
+                
+                  <div class="video__player-btn">
+                    <svg class="video__player-icon">
+                        <use xlink:href="./img/sprite.svg#play"></use>
+                    </svg>
+                  </div>
+              
+                  <div class="video_player-controls">
+                    
+                    <div class="controls-playpause">
+                      <div class="video__playpause-btn">
+                          <svg class="video__icon video__icon--on">
+                              <use xlink:href="./img/sprite.svg#play-button"></use>
+                          </svg>
+                          <svg class="video__icon video__icon--pause">
+                              <use xlink:href="./img/sprite.svg#pause"></use>
+                          </svg>
+                      </div>
+                      
+                      <div class="video__progress-bar">
+                         <div class="video__progress-current"></div>
+                      </div>
+                    </div>
+
+                    <div class="controls-volume">
+                      <div class="video__volume-btn">
+                        <svg class="video__icon volume__icon--on">
+                            <use xlink:href="./img/sprite.svg#volume"></use>
+                        </svg>
+                        <!-- <svg class="video__icon volume-icon--off">
+                            <use xlink:href="./assets/img/sprite.svg#mute"></use>
+                        </svg> -->
+                      </div>
+                      
+                      <div class="video__volume-bar">
+                        <div class="video__volume-current"></div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <!-- Секция: Закажите доставку -->
         <section class="section section_centered form">
@@ -1063,12 +1117,9 @@
         <section class="section contacts">
           <div class="contacts__content"></div>    
           
-          <div class="footer">
-            
+          <div class="footer"> 
             <div class="footer__contacts">
-              
               <div class="footer__adress">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
-              
               <div class="footer__phone">
                 <div class="footer__phone-image">
                   <svg class="footer__phone-icon">
@@ -1079,7 +1130,6 @@
                   <a href="tel:+78123771377" class="footer__phone-number">+7 (812) 377-13-77</a>
                 </div>
               </div>
-
             </div>
 
             <div class="footer__social">
@@ -1175,5 +1225,7 @@
    <script src="./js__scripts/modal-window.js"></script>
    <script src="./js__scripts/form-send.js"></script>
    <script src="./js__scripts/OnePageScroll.js"></script>
+   <script src="./js__scripts/video.js"></script>
+   <script src="https://www.youtube.com/iframe_api"></script>
 </body>
 </html>
