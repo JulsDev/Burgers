@@ -13,6 +13,11 @@
   left: 0;
 }
 
+#player{
+  max-width: rem(660px);
+  width: 100%;
+}
+
 .video__player-btn{
   width: rem(80px);
   height: rem(120px);
@@ -21,14 +26,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
-  z-index: 10;
+  fill: rgba(white, 0.8);
+  opacity: 1;
 }
 
-.video__player-icon {
-  width: 100%;
-  height: 100%;
-  fill: #666666;
-  opacity: 1;
+.video__player-btn--active{
+  opacity: 0;
 }
 
 // нижняя полоса
@@ -111,7 +114,24 @@
   }
 }
 
-.video__playpause-btn,
+.video__playpause-btn{
+  margin-right: 20px;
+}
+
 .video__volume-btn{
   margin-right: 20px;
+  position: relative;
+  top: 0;
+}
+
+.video__volume-btn::after{
+    content: " ";
+    width: rem(10px);
+    height: rem(4px);
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    z-index: 6;
+    transform: translate(-50%, -50%) rotate(45deg);
+    color: $red; 
 }

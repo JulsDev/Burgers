@@ -971,27 +971,30 @@
             
             <div class="work_block">
               <h2 class="title title_black">как мы работаем</h2>
-              
+            
               <div id="video_player-block">
                 
                 <div class="video_player-wrapper">
-                  <div id="video_player-id"></div>
-                
-                  <div class="video__player-btn">
-                    <svg class="video__player-icon">
-                        <use xlink:href="./img/sprite.svg#play"></use>
-                    </svg>
+                  
+                  <div class="video__player">
+                    <video id="player" poster="./img/howwork/bg-video.png">
+                        <!-- MPEG 4 (.mp4) — формат-контейнер для видеокодека H.264 и аудиокодека AAC.Работает в Safari и Chrome. -->
+                        <source src="./video/burger-cut.mp4" type="video/mp4">
+                        <!-- Ogg (.ogv, .oga, .ogx, .ogg) —  формат-контейнер с открытым исходным кодом для видеокодека Theora и аудио Vorbis. Работает в Firefox, Chrome и Opera. -->
+                        <!-- <source src="./video/st.ogv" type="video/ogg"> -->
+                        <!-- WebM (.webm) — формат-контейнер с открытым исходным кодом для видеокодека VP8 от Google и аудиокодека Ogg Vorbis. Работает в Firefox, Chrome, Opera и Adobe Flash Player. -->
+                        <!-- <source src="./video/st.webm" type="video/webm"> -->
+                    </video>
+                    <img src="./img/howwork/play.svg" alt="" class="video__player-btn">
                   </div>
-              
+                
+             
                   <div class="video_player-controls">
                     
                     <div class="controls-playpause">
                       <div class="video__playpause-btn">
                           <svg class="video__icon video__icon--on">
                               <use xlink:href="./img/sprite.svg#play-button"></use>
-                          </svg>
-                          <svg class="video__icon video__icon--pause">
-                              <use xlink:href="./img/sprite.svg#pause"></use>
                           </svg>
                       </div>
                       
@@ -1005,9 +1008,6 @@
                         <svg class="video__icon volume__icon--on">
                             <use xlink:href="./img/sprite.svg#volume"></use>
                         </svg>
-                        <!-- <svg class="video__icon volume-icon--off">
-                            <use xlink:href="./assets/img/sprite.svg#mute"></use>
-                        </svg> -->
                       </div>
                       
                       <div class="video__volume-bar">
@@ -1016,8 +1016,11 @@
                     </div>
 
                   </div>
+
                 </div>
+
               </div>
+
             </div>
           </div>
         </section>
@@ -1225,7 +1228,9 @@
    <script src="./js__scripts/modal-window.js"></script>
    <script src="./js__scripts/form-send.js"></script>
    <script src="./js__scripts/OnePageScroll.js"></script>
-   <script src="./js__scripts/video.js"></script>
-   <script src="https://www.youtube.com/iframe_api"></script>
+   <!-- <script src="./js__scripts/video_YoutubeAPI.js"></script> -->
+   <!-- <script src="https://www.youtube.com/iframe_api"></script> -->
+   <script src="./js__scripts/video_HTMLAPI.js"></script>
+   
 </body>
 </html>
