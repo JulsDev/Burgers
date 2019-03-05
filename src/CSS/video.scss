@@ -1,0 +1,137 @@
+.video_player-block{
+  width: 100%;
+  height: 100%;
+  max-width: rem(660px);
+  position: relative;
+}
+
+.video_player-wrapper{
+  display: flex;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+#player{
+  max-width: rem(660px);
+  width: 100%;
+}
+
+.video__player-btn{
+  width: rem(80px);
+  height: rem(120px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  fill: rgba(white, 0.8);
+  opacity: 1;
+}
+
+.video__player-btn--active{
+  opacity: 0;
+}
+
+// нижняя полоса
+.video_player-controls{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: rem(40px);
+  padding: rem(6px) rem(20px);
+  background-color: #333333;
+}
+
+.controls-playpause,
+.controls-volume{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+.controls-playpause{
+  width: 80%;
+  margin-right: rem(15px);
+}
+.controls-volume{
+  width: 20%;
+}
+
+//маленькие иконки
+.video__icon {
+  width: rem(20px);
+  height: rem(24px);
+  fill: #666666;
+  transition: 0.3s ease-in;
+  cursor: pointer;
+  
+  &--on {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  &--pause {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+
+.video__progress-bar,
+.video__volume-bar {
+  width: 80%;
+  height: 12px;
+  padding: 4px 0;
+  position: relative;
+  background-color: #666666;
+  background-clip: content-box;
+  cursor: pointer;
+}
+
+.video__progress-current,
+.video__volume-current {
+  width: 0;
+  height: 100%;
+  background-color: #666666;
+  position: relative;
+
+  &::after {
+    content: " ";
+    display: flex;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #666666;
+    position: absolute;
+    right: 0;
+    transform: translate(50%, -4.5px);
+    transition: left 0.3s linear;
+  }
+}
+
+.video__playpause-btn{
+  margin-right: 20px;
+}
+
+.video__volume-btn{
+  margin-right: 20px;
+  position: relative;
+  top: 0;
+}
+
+.video__volume-btn::after{
+    content: " ";
+    width: rem(10px);
+    height: rem(4px);
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    z-index: 6;
+    transform: translate(-50%, -50%) rotate(45deg);
+    color: $red; 
+}

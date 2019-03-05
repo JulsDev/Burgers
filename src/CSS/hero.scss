@@ -1,0 +1,95 @@
+.hero{
+  background: url('../img/hero/hero_texture.png') center center no-repeat fixed,
+              url('../img/hero/hero_bg.jpg') center center no-repeat fixed;
+  background-size: cover;
+  position: relative;
+}
+
+.hero__container{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  padding-bottom: rem(20px);
+}
+
+.hero__content{
+  display: flex;
+  align-items: center;
+
+  @include tablets(){
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.hero__content-image,
+.hero__content-tagline{
+  width: 50%;
+
+  @include tablets(){
+    width: auto;
+    max-width: rem(450px);
+  }
+}
+
+.hero__content-image{
+  margin-right: rem(45px);
+}
+
+.hero__burger-image{
+  width: 100%;
+}
+
+.hero__content-tagline{
+  padding-top: rem(115px);
+
+  @include tablets(){
+    justify-content: center;
+    text-align: center;
+    max-width: rem(450px);
+    padding-top: rem(20px);
+  }
+
+  .title{
+    padding-bottom: rem(30px);
+    
+    @include tablets(){
+      padding-bottom: rem(10px);
+    }    
+  }
+}
+
+.hero__content-subtitle{
+  font-size: rem(65px);
+  color: #fff;
+  font-family: 'Lifehack';
+  letter-spacing: rem(-1.63px);
+  line-height: rem(60px);
+
+  @include tablets(){
+    font-size: rem(52px);
+  }
+}
+
+.arrow-scroll{
+  position: absolute;
+  right: 50%;
+  bottom: -20%;
+  padding-top: rem(95px);
+
+  @include tablets(){
+    padding-top: rem(140px);
+  }
+
+  @include phones(){
+    padding-top: rem(60px);
+  }
+}
+
+.arrow-scroll-img{
+  width: rem(29px);
+  height: rem(14px);
+}
+
+
