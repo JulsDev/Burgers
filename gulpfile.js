@@ -1,11 +1,13 @@
 // импортируем gulp (механизм зависимостей node.js)
 // series - для реализации последовательности тасков
 // watch - следит за изменениями в файлах
-const { src, dest, task, series, watch, parallel } = require("gulp"); 
+// const { src, dest, task, series, watch, parallel } = require("gulp"); 
+const gulp = require('gulp'); 
+
 
 // Создаем доп переменную, куда запихиваем все файлы .scss, кроме main.scss
 // т.к. если добавляем, то получаем зацикливание 
-const SRC_DIR = ['!src/CSS/main.scss', 'src/CSS/*.scss'];
+//const SRC_DIR = ['!./src/CSS/**/main.scss', './src/CSS/**/*.scss'];
 
 // Подключение плагинов
 const rm = require("gulp-rm");
@@ -25,15 +27,15 @@ sass.compiler = require("node-sass");
 
 // Сначала необходимо очистить папку dist, чтобы там не оставались неиспользуемые файлы.
 // pipe - передача содержимого от одного файла к другому
-task("clean", () => {
-  return src("dist/**/*", { read: false }).pipe(rm());
+gulp.task("clean", () => {
+  return gulp.src("dist/**/*", { read: false }).pipe(rm());
 });
 
 // Чтобы файлы .html не класть вручную в папку dist каждый раз при её удалении
 // заставим gulp копировать их туда автоматом
-task("copy:html", () => {
-  return src("src/*.html")              // src - читает содержимое папок,
-  .pipe(dest("dist"))                   // куда сохранять
+gulp.task("copy:html", () => {
+  return gulp.src("src/*.html")              // src - читает содержимое папок,
+  .pipe(gulp.dest("dist"))                   // куда сохранять
   .pipe(reload({ stream: true }));      // используем внутри потока (должен быть самымм последним)
 });
 
@@ -42,8 +44,8 @@ task("copy:html", () => {
 //   "src/CSS/main.scss"
 // ];
 
-task("styles", () => {
-  return src(SRC_DIR)
+gulp.task("styles", () => {
+  return gulp.src(["./src/CSS/**/*.scss", '!./src/CSS/**/main.scss'])
   //.pipe(concat("main.scss"))
   .pipe(sourcemaps.init())
   .pipe(sassGlob())
@@ -57,21 +59,21 @@ task("styles", () => {
   .pipe(gcmq())
   .pipe(plumber())
   .pipe(sourcemaps.write("."))
-  .pipe(dest("dist/CSS/"));
+  .pipe(gulp.dest("dist/CSS/"));
 });
 
 
-task("copy:fonts", () => {
-  return src("./src/fonts/**/*")
-  .pipe(dest("dist/fonts/"))
+gulp.task("copy:fonts", () => {
+  return gulp.src("./src/fonts/**/*")
+  .pipe(gulp.dest("dist/fonts/"))
 });
 
-task("copy:images", () => {
-  return src(["./src/img/**/*.*", "!./src/img/**/sprite.svg"])
-  .pipe(dest("dist/img/"))
+gulp.task("copy:images", () => {
+  return gulp.src(["./src/img/**/*.*", "!./src/img/**/sprite.svg"])
+  .pipe(gulp.dest("dist/img/"))
 });
 
-task("server", () => {
+gulp.task("server", () => {
   browserSync.init({
       server: {
           baseDir: "./dist",             // передача настроек в директорию dist
@@ -83,18 +85,18 @@ task("server", () => {
 
 
 // Если в файлах данного таска ппроизошли изменения, то сразу обновляемся
-task("watch", () => {
-  watch("./src/*.html", series("copy:html"));
-  watch("./src/CSS/**/*.scss", series("styles"));
-  watch("./src/fonts/**/*", series("copy:fonts"));
-  watch("./src/img/**/*", series("copy:images"));
+gulp.task("watch", () => {
+  gulp.watch("./src/*.html", gulp.series("copy:html"));
+  gulp.watch("./src/CSS/**/*.scss", gulp.series("styles"));
+  gulp.watch("./src/fonts/**/*", gulp.series("copy:fonts"));
+  gulp.watch("./src/img/**/*", gulp.series("copy:images"));
 });
 
 // Дефолтный таск. Вызывается при команде "npm run gulp"
-task("default", series(
+gulp.task("default", gulp.series(
   "clean", 
   // "svg",
-  parallel("copy:html", "styles", "copy:fonts", "copy:images", "server"),
-  parallel("watch", "server")
+  gulp.parallel("copy:html", "styles", "copy:fonts", "copy:images", "server"),
+  gulp.parallel("watch", "server")
   )
 );
