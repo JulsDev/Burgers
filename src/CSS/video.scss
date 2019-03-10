@@ -27,7 +27,7 @@
   transform: translate(-50%, -50%);
   cursor: pointer;
   fill: rgba(white, 0.8);
-  opacity: 1;
+  //opacity: 1;
 }
 
 .video__player-btn--active{
@@ -72,7 +72,7 @@
   
   &--on {
     opacity: 1;
-    z-index: 1;
+    z-index: 10;
   }
 
   &--pause {
@@ -131,7 +131,7 @@
     position: absolute;
     top: 50%;
     right: 50%;
-    z-index: 6;
+    z-index: 10;
     transform: translate(-50%, -50%) rotate(45deg);
     color: $red; 
 }

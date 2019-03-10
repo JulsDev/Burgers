@@ -52,42 +52,42 @@
       <div class="maincontent">
         
         <!-- Секция: Стартовая -->
-        <section class="section hero active">
+        <section class="section hero active" id="heroSection">
           <div class="container">
               <div class="header">
         
                   <div class="logo">
-                    <img src="./img/icons/logo.svg" alt="logo" class="logo__image">
+                    <img src="./img/hero/logo.png" alt="logo" class="logo__image">
                   </div>
                   
                   <nav class="menu">
                       <ul class="menu_list">
                           <li class="menu_item">
-                            <a class="menu_link" href data-scroll-to="2">о нас</a>
+                            <a class="menu_link" href data-scroll-to="1">о нас</a>
                           </li>
                           <li class="menu_item">
-                            <a class="menu_link" href data-scroll-to="3">бургеры</a>
+                            <a class="menu_link" href data-scroll-to="2">бургеры</a>
                           </li>
                           <li class="menu_item">
-                            <a class="menu_link" href data-scroll-to="4">команда</a>
+                            <a class="menu_link" href data-scroll-to="3">команда</a>
                           </li>
                           <li class="menu_item">
-                            <a class="menu_link" href data-scroll-to="5">меню</a>
+                            <a class="menu_link" href data-scroll-to="4">меню</a>
                           </li>
                           <li class="menu_item">
-                            <a class="menu_link" href data-scroll-to="6">отзывы</a>
+                            <a class="menu_link" href data-scroll-to="5">отзывы</a>
                           </li>
                           <li class="menu_item">
-                            <a class="menu_link" href data-scroll-to="7">как мы работаем</a>
+                            <a class="menu_link" href data-scroll-to="6">как мы работаем</a>
                           </li>
                           <li class="menu_item">
-                            <a class="menu_link" href data-scroll-to="9">контакты</a>
+                            <a class="menu_link" href data-scroll-to="8">контакты</a>
                           </li>  
                       </ul>
                   </nav>
 
                   <div class="header__button">
-                      <a class="button hero__order-button" href data-scroll-to="8">заказать</a>
+                      <a class="button hero__order-button" href data-scroll-to="7">заказать</a>
                       <a href="#" class="humburger_menu">
                         <span class="humburger_menu-line"></span>
                         <span class="humburger_menu-line"></span>
@@ -108,7 +108,10 @@
                 </div> 
                 <div class="arrow-scroll">
                   <a href="#" class="arrow-scroll-link">
-                    <img src="./img/icons/arrow-scroll.svg" alt="arrow-scroll" class="arrow-scroll-img">
+                    <svg class="arrow-scroll-img">
+                        <use xlink:href="./img/sprite.svg#arrow-scroll"></use>
+                    </svg>
+                    <!-- <img src="./img/sprite.svg#arrow-scroll" alt="arrow-scroll" class="arrow-scroll-img"> -->
                   </a>      
                 </div>
               </div>
@@ -116,7 +119,7 @@
         </section>
 
         <!-- Секция: Мы лучшие -->
-        <section class="section section_centered best">
+        <section class="section section_centered best" id="bestSection">
           <div class="container">
             <div class="title title_black">мы лучшие</div>
             <ul class="best__list">
@@ -163,11 +166,10 @@
         </section>
 
         <!-- Секция: Бургеры -->
-        <section class="section section_centered burgers">
-
+        <section class="section section_centered burgers" id="burgersSection">
           <div class="slider-arrow slider-arrow__left">
             <a href="#" class="arrow-left-link">
-              <img src="./img/burgers/left-arrow-scroll.svg" alt="left-arrow-scroll" class="arrow-left-icon">
+              <img src="./img/burgers/arrow-left-scroll.png" alt="left-arrow-scroll" class="arrow-left-icon">
             </a>
           </div>
 
@@ -710,13 +712,13 @@
 
           <div class="slider-arrow slider-arrow__right">
             <a href="#" class="arrow-right-link">
-              <img src="./img/burgers/right-arrow-scroll.svg" alt="right-arrow-scroll" class="arrow-right-icon">
+              <img src="./img/burgers/arrow-right-scroll.png" alt="right-arrow-scroll" class="arrow-right-icon">
             </a>
           </div>
         </section>
 
         <!-- Секция: Команда -->
-        <section class="section section_centered team">
+        <section class="section section_centered team" id="teamSection">
           <div class="team__block">
             <div class="title">команда</div>
             <div class="team__accordeon">
@@ -799,7 +801,7 @@
         </section>
 
         <!-- Секция: Меню -->
-        <section class="section menu-section">
+        <section class="section menu-section" id="menuSection">
           <div class="menu-slider">
             <div class="title title_white menu-slider-title">меню</div>
             <ul class="menu-slider__list">
@@ -859,7 +861,7 @@
         </section>
 
         <!-- Секция: Отзывы -->
-        <section class="section reviews">
+        <section class="section reviews" id="reviewsSection">
           <ul class="reviews__list">
             <li class="reviews__item" style="background-image: url('./img/reviews/11.png')">
               <div class="reviews__item-hover">
@@ -966,7 +968,7 @@
         </section>
 
         <!-- Секция: Как мы работаем -->
-        <section class="section section_centered work">
+        <section class="section section_centered work" id="workSection">
           <div class="container">
             
             <div class="work_block">
@@ -985,7 +987,10 @@
                         <!-- WebM (.webm) — формат-контейнер с открытым исходным кодом для видеокодека VP8 от Google и аудиокодека Ogg Vorbis. Работает в Firefox, Chrome, Opera и Adobe Flash Player. -->
                         <!-- <source src="./video/st.webm" type="video/webm"> -->
                     </video>
-                    <img src="./img/howwork/play.svg" alt="" class="video__player-btn">
+                    <!-- <img src="./img/howwork/play.svg" alt="" class="video__player-btn"> -->
+                    <svg class="video__player-btn">
+                        <use xlink:href="./img/sprite.svg#play"></use>
+                    </svg>
                   </div>
                 
              
@@ -994,7 +999,7 @@
                     <div class="controls-playpause">
                       <div class="video__playpause-btn">
                           <svg class="video__icon video__icon--on">
-                              <use xlink:href="./img/sprite.svg#play-button"></use>
+                              <use xlink:href="./img/sprite.svg#play"></use>
                           </svg>
                       </div>
                       
@@ -1026,7 +1031,7 @@
         </section>
 
         <!-- Секция: Закажите доставку -->
-        <section class="section section_centered form">
+        <section class="section section_centered form" id="formSection">
           <div class="container">
             
             <div class="title">Закажите доставку</div>
@@ -1117,7 +1122,7 @@
         </section>
         
         <!-- Секция: Контакты -->
-        <section class="section contacts">
+        <section class="section contacts" id="contactsSection">
           <div class="contacts__content"></div>    
           
           <div class="footer"> 
@@ -1143,17 +1148,17 @@
                     </svg>
                   </li>
                 <li class="social__item">
-                  <svg width="36" height="36" class="social__link social__link-active">
+                  <svg class="social__link social__link-active">
                     <use xlink:href="./img/sprite.svg#fb"></use>
                   </svg>
                 </li>
                 <li class="social__item">
-                  <svg width="36" height="36" class="social__link">
+                  <svg class="social__link">
                     <use xlink:href="./img/sprite.svg#inst"></use>
                   </svg>
                 </li>
                 <li class="social__item">
-                  <svg width="36" height="36" class="social__link">
+                  <svg class="social__link">
                     <use xlink:href="./img/sprite.svg#twitter"></use>
                   </svg>
                 </li>
@@ -1162,38 +1167,6 @@
           </div>     
         </section>
         
-        <!-- Секция: Боковое меню -->
-        <nav class="fixed-menu">
-          <ul class="fixed-menu__list">
-            <li class="fixed-menu__item active">
-              <a class="fixed-menu__link" href data-scroll-to="1">-</a>
-            </li>
-            <li class="fixed-menu__item">
-              <a class="fixed-menu__link" href data-scroll-to="2">-</a>
-            </li>
-            <li class="fixed-menu__item">
-              <a class="fixed-menu__link" href data-scroll-to="3">-</a>
-            </li>
-            <li class="fixed-menu__item">
-              <a class="fixed-menu__link" href data-scroll-to="4">-</a>
-            </li>
-            <li class="fixed-menu__item">
-              <a class="fixed-menu__link" href data-scroll-to="5">-</a>
-            </li>
-            <li class="fixed-menu__item">
-              <a class="fixed-menu__link" href data-scroll-to="6">-</a>
-            </li>
-            <li class="fixed-menu__item">
-              <a class="fixed-menu__link" href data-scroll-to="7">-</a>
-            </li>
-            <li class="fixed-menu__item">
-              <a class="fixed-menu__link" href data-scroll-to="8">-</a>
-            </li>
-            <li class="fixed-menu__item">
-              <a class="fixed-menu__link" href data-scroll-to="9">-</a>
-            </li>
-          </ul>
-        </nav>
       </div>
     </div>
 
@@ -1216,6 +1189,40 @@
         </div>
      </div>
 
+      <!-- Секция: Боковое меню -->
+      <div class="fixed-menu">
+        <ul class="fixed-menu__list">
+                <li class="fixed-menu__item active">
+                  <a href="#heroSection" class="fixed-menu__link" data-scroll-to="1"></a>
+                </li>
+                <li class="fixed-menu__item">
+                  <a href="#bestSection" class="fixed-menu__link" data-scroll-to="2"></a>
+                </li>
+                <li class="fixed-menu__item">
+                  <a href="#burgersSection" class="fixed-menu__link" data-scroll-to="3"></a>
+                </li>
+                <li class="fixed-menu__item">
+                  <a href="#teamSection" class="fixed-menu__link" data-scroll-to="4"></a>
+                </li>
+                <li class="fixed-menu__item">
+                  <a href="#menuSection" class="fixed-menu__link" data-scroll-to="5"></a>
+                </li>
+                <li class="fixed-menu__item">
+                  <a href="#reviewsSection" class="fixed-menu__link" data-scroll-to="6"></a>
+                </li>
+                <li class="fixed-menu__item">
+                  <a href="#workSection" class="fixed-menu__link" data-scroll-to="7"></a>
+                </li>
+                <li class="fixed-menu__item">
+                  <a href="#formSection" class="fixed-menu__link" data-scroll-to="8"></a>
+                </li>
+                <li class="fixed-menu__item">
+                  <a href="#contactsSection" class="fixed-menu__link" data-scroll-to="9"></a>
+                </li>
+        </ul>
+      </div>
+
+   <script src="./js__scripts/main.js"></script>
    <script src="./js__scripts/jquery-3.3.1.min.js"></script>
    <script src="./js__scripts/jquery.touchSwipe.min.js"></script>
    <script src="./js__scripts/mobile-detect.min.js"></script>
