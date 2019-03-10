@@ -22,6 +22,12 @@ const gcmq = require("gulp-group-css-media-queries");
 const sourcemaps = require('gulp-sourcemaps');
 const plumber = require('gulp-plumber');
 const rename = require("gulp-rename");
+const uglify = require("gulp-uglify");
+const babel = require("gulp-babel");
+const svgo = require("gulp-svgo");
+const svgSprite = require("gulp-svg-sprites");
+const filter = require("gulp-filter");
+const svgmin = require("gulp-svgmin");
 
 sass.compiler = require("node-sass");
 
@@ -39,18 +45,14 @@ gulp.task("copy:html", () => {
   .pipe(reload({ stream: true }));      // используем внутри потока (должен быть самымм последним)
 });
 
-// const styles = [
-//   "node_modules/normalize.css/normalize.css",
-//   "src/CSS/main.scss"
-// ];
 
 gulp.task("styles", () => {
-  return gulp.src(["./src/CSS/**/*.scss", '!./src/CSS/**/main.scss'])
-  //.pipe(concat("main.scss"))
+  return gulp.src("./src/CSS/**/main.scss")
   .pipe(sourcemaps.init())
   .pipe(sassGlob())
+  .pipe(concat("main.scss"))
   .pipe(sass().on("error", sass.logError))
-  .pipe(rename("main.min.css"))
+  //.pipe(rename("main.min.css"))
   //.pipe(pxInrem)
   .pipe(autoprefixer({
     browsers: ['last 2 versions'],
@@ -59,7 +61,8 @@ gulp.task("styles", () => {
   .pipe(gcmq())
   .pipe(plumber())
   .pipe(sourcemaps.write("."))
-  .pipe(gulp.dest("dist/CSS/"));
+  .pipe(gulp.dest("dist/CSS/"))
+  .pipe(reload({stream:true}))
 });
 
 
@@ -69,9 +72,53 @@ gulp.task("copy:fonts", () => {
 });
 
 gulp.task("copy:images", () => {
-  return gulp.src(["./src/img/**/*.*", "!./src/img/**/sprite.svg"])
+  return gulp.src(["./src/img/**/*.*", "!./src/img/**/*.svg"])
   .pipe(gulp.dest("dist/img/"))
 });
+
+gulp.task("copy:video", () => {
+  return gulp.src("./src/video/**/*.*")
+  .pipe(gulp.dest("dist/video/"))
+});
+
+gulp.task("scripts", () => {
+  return gulp.src("./src/js__scripts/**/*.js")
+  .pipe(sourcemaps.init())
+  .pipe(concat("main.js", {newLine: ";"}))        // склеиваем в один файл и ставим ; перед содержимым каждого файла
+  //.pipe(uglify())                                 // сжимаем наш JS
+  .pipe(sourcemaps.write("."))
+  // .pipe(babel({
+  //   presets: ['@babel/env']
+  // }))
+  .pipe(gulp.dest("dist/js__scripts/"))
+  .pipe(reload({stream:true}))
+});
+
+gulp.task("svg", () => {
+  return gulp.src("./src/img/icons/*.svg")
+  .pipe(svgmin({
+      js2svg: {
+        pretty: true
+      },
+      plugins: []  
+  }))
+  .pipe(svgo({
+      plugins: [
+        {
+          removeAttrs: { attrs: "(fill|stroke|style|width|height|data.*)"}
+        }
+      ]
+    })
+  )
+  .pipe(svgSprite({
+      svg: {
+        sprite: "./sprite.svg"
+      }
+  }))
+  .pipe(filter("**/*.svg"))
+  .pipe(gulp.dest("dist/img/"))
+});
+
 
 gulp.task("server", () => {
   browserSync.init({
@@ -90,13 +137,15 @@ gulp.task("watch", () => {
   gulp.watch("./src/CSS/**/*.scss", gulp.series("styles"));
   gulp.watch("./src/fonts/**/*", gulp.series("copy:fonts"));
   gulp.watch("./src/img/**/*", gulp.series("copy:images"));
+  gulp.watch("./src/video/**/*", gulp.series("copy:video"));
+  gulp.watch("./src/js__scripts/**/*.js", gulp.series("scripts"));
 });
 
 // Дефолтный таск. Вызывается при команде "npm run gulp"
 gulp.task("default", gulp.series(
   "clean", 
-  // "svg",
-  gulp.parallel("copy:html", "styles", "copy:fonts", "copy:images", "server"),
+  "svg",
+  gulp.parallel("copy:html", "styles", "copy:fonts", "copy:images", "copy:video", "scripts"),
   gulp.parallel("watch", "server")
   )
 );

@@ -3,6 +3,7 @@
   position: fixed;
   top: rem(88px);
   right: rem(48px);
+  z-index: 100;
 
   @include tablets(){
     display: none;
@@ -38,5 +39,25 @@
 
   &.active{
     border: 1px solid #ffffff;
+  }
+}
+
+.fixed-menu__link{
+  :before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  :after{
+    content: "";
+    width: 0rem;
+    height: 0rem;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    opacity: 0;
+    transition: .3s;
   }
 }

@@ -7,19 +7,18 @@ $(document).ready(function(){
   let isScroll = false;
 
   const setActiveMenuItem = sectionNum => {
-    $('.fixed-menu__item').eq(sectionNum-1).addClass('active')
+    $('.fixed-menu__item').eq(sectionNum).addClass('active')
       .siblings().removeClass('active');
   }
 
   // Сдвигаем слайды
   const performTransition = function(sectionNum){
-    if(sectionNum == 0) return;
     // Проверяем флаг, чтобы не листать, пока идет предыдущая анимация
     if(isScroll) return;
     // Если предыдущей не было
     isScroll = true;
     // Задаем сдвиг
-    const position = (sectionNum-1) * -100 + "%";
+    const position = (sectionNum) * -100 + "%";
     // Навешиваем активный класс на элемент
     sectionItem = sections.eq(sectionNum);
     sectionItem.addClass("active").siblings().removeClass("active");

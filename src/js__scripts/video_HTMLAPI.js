@@ -1,7 +1,7 @@
 
 // Версия без YouTube
 
-$().ready(function(){
+$(document).ready(function(){
   
   let interval;
 
