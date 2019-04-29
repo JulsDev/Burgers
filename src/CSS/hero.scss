@@ -23,40 +23,54 @@
   }
 }
 
-.hero__content-image,
-.hero__content-tagline{
-  width: 50%;
-
-  @include tablets(){
-    width: auto;
-    max-width: rem(450px);
-  }
-}
-
 .hero__content-image{
   margin-right: rem(45px);
+  
+  @include tablets{
+    margin-right: 0;
+  }
+
+  @include phones{
+    width: 70%;
+  }
 }
 
 .hero__burger-image{
   width: 100%;
+
+  @include tablets{
+    width: 70%;
+    margin-left: 10%;
+  }
+
+  @include phones{
+    width: 85%;
+    margin-left: 5%;
+    margin-top: 10%;
+  }
 }
 
 .hero__content-tagline{
-  padding-top: rem(115px);
+  width: 50%;
+
+  .title{
+    margin-bottom: rem(20px);
+
+    @include tablets(){
+      margin-top: rem(10px);
+      margin-bottom: rem(10px);
+    }
+
+    @include phones{
+      font-size: rem(48px);
+      margin-top: 10%;
+    }
+  }
 
   @include tablets(){
     justify-content: center;
     text-align: center;
-    max-width: rem(450px);
-    padding-top: rem(20px);
-  }
-
-  .title{
-    // padding-bottom: rem(30px);
-    
-    @include tablets(){
-      padding-bottom: rem(10px);
-    }    
+    font-size: rem(24px);
   }
 }
 
@@ -70,6 +84,9 @@
   @include tablets(){
     font-size: rem(52px);
   }
+  @include phones(){
+    font-size: rem(42px);
+  }
 }
 
 .arrow-scroll{
@@ -79,6 +96,7 @@
   padding-top: rem(95px);
 
   @include tablets(){
+    bottom: -10%;
     padding-top: rem(140px);
   }
 

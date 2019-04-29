@@ -14,20 +14,15 @@
 
 .composition__item{
   padding-bottom: rem(5px);
-  width: auto;
-  height: auto;
 
   &:last-child{
     padding-bottom: 0px;
   }
 }
 
-// .composition__image{
-//   padding-right: rem(25px);
-// }
 .composition__icon{
-  width: 48px;
-  height: 43px;
+  width: rem(48px);
+  height: rem(43px);
 }
 
 .composition__text{

@@ -33,6 +33,10 @@
 .title-text{
   font-size: rem(14px);
   line-height: rem(15px);
+
+  @include tablets{
+    font-size: rem(14px);
+  }
 }
 
 // Иконка "ККал"
@@ -58,6 +62,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -30%);
+
+  @include tablets{
+    font-size: rem(18px);
+  }
 }
 
 .burger-consist_hover{

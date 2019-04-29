@@ -726,7 +726,7 @@ $(document).ready(function(){
         balloonContent: placemarks[i].balloonContent
       }, {
         iconLayout: 'default#image',
-        iconImageHref: 'img/contacts/map-marker.png',
+        iconImageHref: './img/contacts/map-marker.png',
         iconImageSize: [46, 58],
         iconImageOffset: [-23, -57]
       });
