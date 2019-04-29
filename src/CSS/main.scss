@@ -9,10 +9,7 @@ $green: #99cc33;
 
 $tablets: 768px;
 $phones: 480px;
-
-// @import "./_misc/*.scss";
-// @import "./layout/*.scss";
-// @import "./*.scss";
+$phones_small: 320px;
 
 @import './misc/media.scss';
 @import "./layout/base.scss";

@@ -767,11 +767,6 @@ template {
   align-items: center;
 }
 
-.hero__content-image,
-.hero__content-tagline {
-  width: 50%;
-}
-
 .hero__content-image {
   margin-right: 2.8125rem;
 }
@@ -781,7 +776,11 @@ template {
 }
 
 .hero__content-tagline {
-  padding-top: 7.1875rem;
+  width: 50%;
+}
+
+.hero__content-tagline .title {
+  margin-bottom: 1.25rem;
 }
 
 .hero__content-subtitle {
@@ -1069,8 +1068,6 @@ template {
 
 .burger__image {
   max-width: 100%;
-  width: 26.875rem;
-  height: 20rem;
 }
 
 .display-icon-burg {
@@ -1098,11 +1095,14 @@ template {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 25.75rem;
 }
 
 .item-col__descr .title {
   margin-bottom: 3.25rem;
+}
+
+.burgers-main__img {
+  max-height: 250px;
 }
 
 .burgers-main__text {
@@ -1155,8 +1155,6 @@ template {
 
 .composition__item {
   padding-bottom: 0.3125rem;
-  width: auto;
-  height: auto;
 }
 
 .composition__item:last-child {
@@ -1164,8 +1162,8 @@ template {
 }
 
 .composition__icon {
-  width: 48px;
-  height: 43px;
+  width: 3rem;
+  height: 2.6875rem;
 }
 
 .composition__text {
@@ -1953,13 +1951,16 @@ input:invalid,
 .social__item {
   margin-top: 0.625rem;
   margin-right: 1.125rem;
+  width: 1.5625rem;
+  height: 1.5625rem;
 }
 
 .social__link {
   fill: #ffffff;
   opacity: .2;
-  width: 1.5625rem;
-  height: 1.5625rem;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }
 
 .social__link-active {
@@ -2061,10 +2062,18 @@ input:invalid,
     align-items: center;
   }
 
-  .hero__content-image,
-  .hero__content-tagline {
-    width: auto;
-    max-width: 28.125rem;
+  .hero__content-image {
+    margin-right: 0;
+  }
+
+  .hero__burger-image {
+    width: 70%;
+    margin-left: 10%;
+  }
+
+  .hero__content-tagline .title {
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
   }
 
   .hero__content-tagline {
@@ -2072,12 +2081,7 @@ input:invalid,
     -ms-flex-pack: center;
     justify-content: center;
     text-align: center;
-    max-width: 28.125rem;
-    padding-top: 1.25rem;
-  }
-
-  .hero__content-tagline .title {
-    padding-bottom: 0.625rem;
+    font-size: 1.5rem;
   }
 
   .hero__content-subtitle {
@@ -2085,6 +2089,7 @@ input:invalid,
   }
 
   .arrow-scroll {
+    bottom: -10%;
     padding-top: 8.75rem;
   }
 
@@ -2094,6 +2099,14 @@ input:invalid,
 
   .display-icon-burg {
     margin-left: 3.125rem;
+  }
+
+  .title-text {
+    font-size: 0.875rem;
+  }
+
+  .title-text-icon {
+    font-size: 1.125rem;
   }
 
   .burgers {
@@ -2113,7 +2126,7 @@ input:invalid,
   }
 
   .burger__item-col {
-    width: 100%;
+    width: 70%;
   }
 
   .item-col__image {
@@ -2124,6 +2137,7 @@ input:invalid,
 
   .burger__image {
     max-width: 80%;
+    margin-bottom: 4%;
   }
 
   .display-icon-kkal {
@@ -2142,7 +2156,7 @@ input:invalid,
   }
 
   .item-col__descr .title {
-    margin-bottom: 0rem;
+    margin-bottom: 5%;
     line-height: 2.5rem;
   }
 
@@ -2158,6 +2172,14 @@ input:invalid,
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+  }
+
+  .burger-currency {
+    font-size: 1.375rem;
+  }
+
+  .burgers-button {
+    margin-top: 0.625rem;
   }
 
   .team__block {
@@ -2249,6 +2271,25 @@ input:invalid,
     font-size: 0.8125rem;
   }
 
+  .hero__content-image {
+    width: 70%;
+  }
+
+  .hero__burger-image {
+    width: 85%;
+    margin-left: 5%;
+    margin-top: 10%;
+  }
+
+  .hero__content-tagline .title {
+    font-size: 3rem;
+    margin-top: 10%;
+  }
+
+  .hero__content-subtitle {
+    font-size: 2.625rem;
+  }
+
   .arrow-scroll {
     padding-top: 3.75rem;
   }
@@ -2287,8 +2328,8 @@ input:invalid,
     max-width: 20rem;
   }
 
-  .burger__image {
-    max-width: 70%;
+  .burger__item-col {
+    width: 100%;
   }
 
   .reviews__item-hover {
@@ -2357,6 +2398,17 @@ input:invalid,
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .item-col__image {
+    padding-left: 5%;
+  }
+
+  .burgers-main__img {
+    padding-left: 10%;
+    padding-top: 18%;
   }
 }
 /*# sourceMappingURL=main.css.map */

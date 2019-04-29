@@ -56,7 +56,7 @@ gulp.task("styles", () => {
   //.pipe(pxInrem)
   .pipe(autoprefixer({
     browsers: ['last 2 versions'],
-    cascade: true
+    cascade: false
    }))
   .pipe(gcmq())
   .pipe(plumber())
@@ -69,16 +69,19 @@ gulp.task("styles", () => {
 gulp.task("copy:fonts", () => {
   return gulp.src("./src/fonts/**/*")
   .pipe(gulp.dest("dist/fonts/"))
+  .pipe(reload({ stream: true }))
 });
 
 gulp.task("copy:images", () => {
-  return gulp.src(["./src/img/**/*.*", "!./src/img/**/*.svg"])
+  return gulp.src("./src/img/**/*.*")
   .pipe(gulp.dest("dist/img/"))
+  .pipe(reload({ stream: true }));
 });
 
 gulp.task("copy:video", () => {
   return gulp.src("./src/video/**/*.*")
   .pipe(gulp.dest("dist/video/"))
+  .pipe(reload({ stream: true }))
 });
 
 gulp.task("scripts", () => {
@@ -94,7 +97,7 @@ gulp.task("scripts", () => {
   .pipe(reload({stream:true}))
 });
 
-gulp.task("svg", () => {
+gulp.task("copy:svg", () => {
   return gulp.src("./src/img/icons/*.svg")
   .pipe(svgmin({
       js2svg: {
@@ -138,14 +141,16 @@ gulp.task("watch", () => {
   gulp.watch("./src/fonts/**/*", gulp.series("copy:fonts"));
   gulp.watch("./src/img/**/*", gulp.series("copy:images"));
   gulp.watch("./src/video/**/*", gulp.series("copy:video"));
+  //gulp.watch("./src/img/icons/*.svg", gulp.series("copy:svg"));
   gulp.watch("./src/js__scripts/**/*.js", gulp.series("scripts"));
 });
 
 // Дефолтный таск. Вызывается при команде "npm run gulp"
 gulp.task("default", gulp.series(
   "clean", 
-  "svg",
+  //"copy:svg",
   gulp.parallel("copy:html", "styles", "copy:fonts", "copy:images", "copy:video", "scripts"),
   gulp.parallel("watch", "server")
   )
 );
+
