@@ -1,0 +1,24 @@
+
+.title{
+  font-size: rem(70px);
+  color: $orange;
+  font-family: 'Gagalin';
+  line-height: rem(64px);
+
+  &_black{
+    color: $black;
+  }
+
+  &_white{
+    color: $white;
+  }
+
+  &_red{
+    color: $red;
+  }
+
+  @include tablets(){
+    font-size: rem(52px);
+  }
+
+}

@@ -1,0 +1,37 @@
+
+$red: #e45028;
+$dark-red: #c1401e;
+$orange: #f9b43b;
+$black: #2f3234;
+$white: #ffffff;
+$yellow: #ffcc33;
+$green: #99cc33;
+
+$tablets: 768px;
+$phones: 480px;
+$phones_small: 320px;
+
+@import './misc/media.scss';
+@import "./layout/base.scss";
+@import "./layout/fonts.scss";
+@import "./layout/normalize.scss";
+
+@import './header.scss';
+@import "./button.scss";
+@import "./humburger-menu.scss";
+@import "./hero.scss";
+@import "./title.scss";
+@import "./best.scss";
+@import "./burger-icons.scss";
+@import "./burgers.scss";
+@import "./composition.scss";
+@import "./team.scss";
+@import "./menu.scss";
+@import "./reviews.scss";
+@import "./modal-window.scss";
+@import "./work.scss";
+@import "./video.scss";
+@import "./form.scss";
+@import "./contacts.scss";
+@import "./fixed-menu.scss";
+

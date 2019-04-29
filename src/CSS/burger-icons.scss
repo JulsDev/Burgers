@@ -1,0 +1,83 @@
+
+// Иконка "Состав"
+.display-icon{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.burgers-icon-gen{
+  position: relative;
+}
+
+.display-icon-burg{
+  width: rem(90px);
+  height: rem(90px);
+  border-radius: 5px;
+  padding: rem(10px);
+  background-color: $red;
+  opacity: 0.5;
+
+  @include tablets{
+    margin-left: rem(50px);
+  }
+}
+
+.burgers-icon-burg{
+  width: rem(46px);
+  height: rem(44px);
+  fill: $white;
+}
+
+.title-text{
+  font-size: rem(14px);
+  line-height: rem(15px);
+
+  @include tablets{
+    font-size: rem(14px);
+  }
+}
+
+// Иконка "ККал"
+.display-icon-kkal{
+  width: rem(90px);
+  height: rem(90px);
+  border-radius: 5px;
+  padding: rem(10px);
+  background-color: none;
+  opacity: 0.6;
+}
+
+.burgers-icon-kkal{
+  width: rem(60px);
+  height: rem(60px);
+  fill: $white;
+}
+
+.title-text-icon{
+  font-size: rem(18px);
+  line-height: rem(15px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+
+  @include tablets{
+    font-size: rem(18px);
+  }
+}
+
+.burger-consist_hover{
+  position: absolute;
+  opacity: 0;
+}
+
+.display-icon:hover + .burger-consist_hover{
+  opacity: 1;
+}
+
+.display-icon-burg:hover{
+  background-color: $dark-red;
+  cursor: pointer;
+}

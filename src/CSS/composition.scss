@@ -1,0 +1,48 @@
+.composition{
+  display: flex;
+  align-items: flex-start;
+  width: rem(270px);
+  border-radius: 5px;
+  background: rgba($white, 0.8);
+  padding: rem(18px) rem(22px);
+}
+
+.composition__table{
+  width: 100%;
+  font-family: 'Ubuntu';
+}
+
+.composition__item{
+  padding-bottom: rem(5px);
+
+  &:last-child{
+    padding-bottom: 0px;
+  }
+}
+
+.composition__icon{
+  width: rem(48px);
+  height: rem(43px);
+}
+
+.composition__text{
+  font-weight: 500;
+}
+.composition__weight{
+  text-align: right;
+}
+
+
+.composition__icon-beef,
+.composition__icon-sauce{
+  fill: $red;
+}
+.composition__icon-buns,
+.composition__icon-cheese{
+  fill: $yellow;
+}
+.composition__icon-salad,
+.composition__icon-cucumber{
+  fill: $green;
+}
+

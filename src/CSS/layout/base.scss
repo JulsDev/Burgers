@@ -1,0 +1,97 @@
+html{
+  height: 100%;
+  font-size: rem(16px);
+
+  @include tablets(){
+    font-size: rem(14px);
+  }
+
+  @include phones(){
+    font-size: rem(13px);
+  }
+}
+
+body{
+  height: 100%;
+  margin: 0;          /* у body по умолчанию отступы 8px */
+  background: $white; 
+  font-size: rem(14px);
+  font-family: 'Ubuntu';
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  //min-width: 945px;
+  //min-height: 100%;
+}
+
+.maincontent{
+  height: 100%;
+  min-height: 650px;
+  // transform: translateY();  //берет значение от height
+  transition: transform 1s;
+  will-change: transform;
+}
+
+.container{
+  position: relative;
+  margin: 0 auto;
+  width: 95%;
+  max-width: 945px;
+}
+
+.section{
+  height: 100%;
+  min-height: rem(650px);
+
+  &_centered{
+    .container{
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
+  font-weight: normal;
+}
+
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button{
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+

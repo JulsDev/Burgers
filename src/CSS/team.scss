@@ -1,0 +1,135 @@
+
+.team{
+  position: relative;
+  background: url('../img/team/SBS_1255-X2.png') center center no-repeat;
+  background-size: cover;
+}
+
+.team__block{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  background: $black;
+  opacity: 0.93;
+  padding-top: rem(53px);
+
+  .title{
+    margin-bottom: rem(46px);
+  }
+
+  @include tablets(){
+    width: 100%;
+  }
+}
+
+.team__list{
+  @include tablets(){
+    text-align: center;
+  }
+}
+
+.team__item{
+  display: block;
+  margin-bottom: rem(35px);
+
+  @include tablets(){
+    margin-bottom: 0;
+  }
+}
+
+.team__item-person{
+  margin-bottom: rem(17px);
+}
+
+.team__item-link{
+  font-family: 'Gagalin';
+  font-size: rem(14px);
+  font-weight: 400;
+  line-height: rem(28.13px);
+  color: $white;
+
+  &:before{
+    content: "";
+    display: inline-flex;
+    vertical-align: centre;
+    width: rem(9px);
+    height: rem(6px);
+    background: url('../img/team/Polygon_1.png') center center no-repeat;
+    margin-right: rem(10px);
+  }
+  
+  @include tablets{
+    font-size: rem(22px);
+  }
+}
+
+.team__item-block{
+  display: flex;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.team__item-content{
+  display: flex;
+  height: rem(100px);
+
+  @include tablets{
+    flex-direction: column;
+    align-items: center;
+    height: rem(250px);
+  }
+}
+
+.photo__person{
+  margin: 0 rem(21px);
+  width: rem(100px);
+  height: rem(100px);
+  border-radius: 50%;
+}
+
+.team__item-descr{
+  width: rem(208px);
+  color: $white;
+  font-family: 'Ubuntu';
+  font-size: rem(14px);
+  font-weight: 300;
+  line-height: rem(24.01px);
+}
+
+.block-title{
+  height: rem(15px);
+  font-weight: 700;
+  margin-bottom: rem(20px);
+}
+
+.block_text{
+  font-weight: 300;
+}
+
+.team__item-active{
+
+  .team__item-link{
+    color: $orange;
+  }
+
+  .team__item-link::before{
+    transform: rotate(-180deg);
+  }
+
+  .team__item-block{
+    height: rem(100px);
+
+    @include tablets {
+      flex-direction: column;
+      align-items: center;
+      height: rem(250px);
+    }
+  }
+}

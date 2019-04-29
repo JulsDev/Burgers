@@ -1,0 +1,78 @@
+
+.menu-section{
+  background: url('../img/menu/main-bg.png') center center no-repeat;
+  background-size: cover;
+}
+
+.menu-slider{
+  display: flex;
+  position: relative;
+  top: 0;
+  right: 0;
+
+  &-title{
+    padding-top: rem(109px);
+    padding-left: rem(60px);
+  }
+}
+
+.menu-slider__list{
+  display: flex;
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.menu-slider__item{
+  display: flex;
+}
+
+.menu__item-title{
+   position: relative;
+   width: 5rem;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   background-repeat: no-repeat;
+   background-size: cover;
+   line-height: 5rem;
+   cursor: pointer;
+}
+
+.slider-title{
+   white-space: nowrap;
+   position: absolute;
+   text-align: center;
+   left: 0;
+   bottom: 0;
+   font-size: rem(36px);
+   transform: rotate(-90deg);
+   transform-origin: 0 0;
+   padding-bottom: rem(40px);
+   padding-left: rem(25px);
+}
+
+.menu__item-content{
+   background-color: rgba(47, 50, 52, 0.929);
+   width: 0px;
+   visibility: hidden;
+   opacity: 0;
+   transition: 1s;
+   transition-property: width, opacity, visibility;   
+}
+
+.menu__item-text{
+  color: $white;
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  line-height: 1.714;
+  width: rem(540px);
+  padding: rem(62px) rem(32px);
+  
+  @include tablets(){
+    width: rem(340px);
+    padding: rem(52px) rem(22px);
+  }
+}

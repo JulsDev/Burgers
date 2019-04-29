@@ -1,0 +1,16 @@
+.work{
+  background: url('../img/howwork/BG_.png') center center no-repeat;
+  background-size: cover;
+}
+
+.work_block{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title{
+    margin-bottom: rem(50px);
+    margin-top: rem(60px);
+  }
+}
+

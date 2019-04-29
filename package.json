@@ -1,0 +1,48 @@
+{
+  "name": "Burgers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JulsDev/Burgers.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JulsDev/Burgers/issues"
+  },
+  "homepage": "https://github.com/JulsDev/Burgers#readme",
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-filter": "^5.1.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rm": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.0.9",
+    "gulp-smile-px2rem": "^0.1.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-svg-sprites": "^4.1.2",
+    "gulp-svgo": "^2.1.0",
+    "gulp-uglify": "^3.0.2",
+    "node-sass": "^4.11.0"
+  },
+  "dependencies": {
+    "gulp-rename": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-svgmin": "^2.1.0",
+    "normalize.css": "^8.0.1"
+  }
+}

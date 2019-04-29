@@ -1,0 +1,181 @@
+
+.form{
+  background: url('../img/form/bg-texture.png') center center no-repeat,
+              url('../img/form/bg.png') center center no-repeat;
+  background-size: cover;
+}
+
+.form .title{
+  @include phones(){
+    text-align: center;
+  }
+}
+.order_form{
+  display: flex;
+  margin: rem(50px) rem(0px);
+
+  @include tablets(){
+    flex-direction: column;
+  }
+}
+
+.order_form-col{
+  width: 50%;
+
+  @include tablets(){
+    width: initial;
+    margin: 0 rem(125px);
+  }
+
+  @include phones(){
+    width: initial;
+    margin: 0;
+  }
+}
+
+.form__row{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: rem(20px);
+}
+
+.form__block{
+  flex: 1;
+  margin-right: rem(20px);
+}
+
+.form__block-input{
+  border-radius: rem(5px);
+  width: 100%;
+  height: rem(35px);
+  border: 1px solid #d1cfcb;
+  background-color: #d1cfcb;
+}
+
+.form__label{
+  color: $white;
+  font-size: rem(14px);
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  line-height: rem(24px);
+}
+
+.comment{
+  // resize: none;
+  width: 100%;
+  height: rem(109px);
+  border-radius: rem(5px);
+  border: 1px solid #d1cfcb;
+  background-color: #d1cfcb;
+}
+
+.comment:focus,
+.form__block-input:focus{
+  border: 1px solid #f89513;
+  outline: none !important;
+}
+
+// Относится  к полям, у которых выставлено required
+input:invalid,
+.comment:invalid {
+  border: 2px solid red;
+}
+
+.form__block-choise{
+  display: flex;
+  align-items: center;
+  margin-bottom: rem(20px);
+
+  @include phones(){
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.block-radio{
+  margin-right: rem(20px);
+}
+
+.radio,
+.checkbox{
+  display: none;
+  margin-right: rem(10px);
+}
+
+.radio-custom,
+.checkbox-custom{
+  position: relative;
+  width: rem(15px);
+  height: rem(15px);
+  border: 1px solid $white;
+  background-color: $white;
+}
+
+.radio-custom,
+.checkbox-custom,
+.form-label{
+  display: inline-flex;
+  vertical-align: middle;
+  margin-right: rem(10px);
+  cursor: pointer;
+}
+
+.form-label{
+  color: $white;
+  font-size: rem(14px);
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  line-height: rem(24px);
+}
+
+// Стилизуем новые радиобаттон
+.radio:checked+.radio-custom::before{
+  content: "";
+  display: block;
+  position: absolute;
+  width: rem(7px);
+  height: rem(7px);
+  top: rem(3px);
+  left: rem(3px);
+  border: 1px solid #e35028;
+  background: #e35028;
+}
+
+.radio-custom,
+.radio:checked+.radio-custom::before{
+  border-radius: 50%;
+  color: #e35028;
+}
+
+// Стилизуем новый чекбокс
+.checkbox:checked+.checkbox-custom::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: rem(14px);
+  height: rem(9px);
+  border-radius: 1px;
+  border-left: 4px solid #e35028;
+  border-bottom: 4px solid #e35028;
+  -webkit-transform: rotate(-55deg);
+	-moz-transform: rotate(-55deg);
+	-o-transform: rotate(-55deg);
+	-ms-transform: rotate(-55deg);
+  transform: rotate(-55deg);
+  opacity: 1;
+}
+
+.form .button,
+.button__clear{
+  color: $white;
+  outline: none;
+}
+
+.form__block-btn{
+  @include phones(){
+    display: flex;
+    justify-content: center;
+  }
+}
+
