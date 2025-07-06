@@ -1,4 +1,5 @@
 
-Сайт для сети Бургерных
+Educational project
 
-Ссылка на проект: https://julsdev.github.io/Burgers/dist/startpage.html 
+Website for burger chains
+Link to the project: https://julsdev.github.io/Burgers/dist/startpage.html 
